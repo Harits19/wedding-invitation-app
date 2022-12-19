@@ -2,12 +2,15 @@
   "name": "wedding-invitation-app",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "homepage": "https://harits19.github.io/wedding-invitation-app",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "deploy": "gh-pages -d web-build",
+    "predeploy": "expo export:web"
   },
   "jest": {
     "preset": "jest-expo"

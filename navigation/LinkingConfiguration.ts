@@ -10,10 +10,11 @@ import * as Linking from 'expo-linking';
 import { RootStackParamList } from '../types';
 
 const linking: LinkingOptions<RootStackParamList> = {
-  prefixes: [Linking.createURL('/')],
+  prefixes: ["http://localhost*", "https://harits19.github.io/wedding-invitation-app"],
   config: {
     screens: {
       Root: {
+        path: "/wedding-invitation-app",
         screens: {
           TabOne: {
             screens: {
