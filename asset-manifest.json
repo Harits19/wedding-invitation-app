@@ -1,0 +1,35 @@
+{
+  "files": {
+    "app.js": "/wedding-invitation-app/static/js/app.2f2082b9.chunk.js",
+    "app.js.map": "/wedding-invitation-app/static/js/app.2f2082b9.chunk.js.map",
+    "runtime~app.js": "/wedding-invitation-app/static/js/runtime~app.bbdef20a.js",
+    "runtime~app.js.map": "/wedding-invitation-app/static/js/runtime~app.bbdef20a.js.map",
+    "static/js/2.61513471.chunk.js": "/wedding-invitation-app/static/js/2.61513471.chunk.js",
+    "static/js/2.61513471.chunk.js.map": "/wedding-invitation-app/static/js/2.61513471.chunk.js.map",
+    "fonts/AntDesign.ttf": "/wedding-invitation-app/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/wedding-invitation-app/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/wedding-invitation-app/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/wedding-invitation-app/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/wedding-invitation-app/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/wedding-invitation-app/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/wedding-invitation-app/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/wedding-invitation-app/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/wedding-invitation-app/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/wedding-invitation-app/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/wedding-invitation-app/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/wedding-invitation-app/./fonts/SimpleLineIcons.ttf",
+    "fonts/SpaceMono-Regular.ttf": "/wedding-invitation-app/./fonts/SpaceMono-Regular.ttf",
+    "favicon-16.png": "/wedding-invitation-app/favicon-16.png",
+    "favicon-32.png": "/wedding-invitation-app/favicon-32.png",
+    "favicon.ico": "/wedding-invitation-app/favicon.ico",
+    "index.html": "/wedding-invitation-app/index.html",
+    "manifest.json": "/wedding-invitation-app/manifest.json",
+    "serve.json": "/wedding-invitation-app/serve.json",
+    "static/js/2.61513471.chunk.js.LICENSE.txt": "/wedding-invitation-app/static/js/2.61513471.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.bbdef20a.js",
+    "static/js/2.61513471.chunk.js",
+    "static/js/app.2f2082b9.chunk.js"
+  ]
+}
