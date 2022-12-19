@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/wedding-invitation-app/static/js/app.37913d08.chunk.js",
-    "app.js.map": "/wedding-invitation-app/static/js/app.37913d08.chunk.js.map",
+    "app.js": "/wedding-invitation-app/static/js/app.2f2082b9.chunk.js",
+    "app.js.map": "/wedding-invitation-app/static/js/app.2f2082b9.chunk.js.map",
     "runtime~app.js": "/wedding-invitation-app/static/js/runtime~app.bbdef20a.js",
     "runtime~app.js.map": "/wedding-invitation-app/static/js/runtime~app.bbdef20a.js.map",
-    "static/js/2.6c7e3669.chunk.js": "/wedding-invitation-app/static/js/2.6c7e3669.chunk.js",
-    "static/js/2.6c7e3669.chunk.js.map": "/wedding-invitation-app/static/js/2.6c7e3669.chunk.js.map",
+    "static/js/2.61513471.chunk.js": "/wedding-invitation-app/static/js/2.61513471.chunk.js",
+    "static/js/2.61513471.chunk.js.map": "/wedding-invitation-app/static/js/2.61513471.chunk.js.map",
     "fonts/AntDesign.ttf": "/wedding-invitation-app/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/wedding-invitation-app/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/wedding-invitation-app/./fonts/Feather.ttf",
@@ -25,11 +25,11 @@
     "index.html": "/wedding-invitation-app/index.html",
     "manifest.json": "/wedding-invitation-app/manifest.json",
     "serve.json": "/wedding-invitation-app/serve.json",
-    "static/js/2.6c7e3669.chunk.js.LICENSE.txt": "/wedding-invitation-app/static/js/2.6c7e3669.chunk.js.LICENSE.txt"
+    "static/js/2.61513471.chunk.js.LICENSE.txt": "/wedding-invitation-app/static/js/2.61513471.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.bbdef20a.js",
-    "static/js/2.6c7e3669.chunk.js",
-    "static/js/app.37913d08.chunk.js"
+    "static/js/2.61513471.chunk.js",
+    "static/js/app.2f2082b9.chunk.js"
   ]
 }
