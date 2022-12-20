@@ -3,7 +3,7 @@ import { Dimensions } from 'react-native';
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 
-export default {
+export const Layout = {
   window: {
     width,
     height,
@@ -11,5 +11,5 @@ export default {
   isSmallDevice: width < 375,
 };
 
-export const baseWidth = 500;
-export const baseHeight = 600;
+export const baseWidth = 412;
+export const baseHeight = 914;

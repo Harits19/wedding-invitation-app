@@ -4,7 +4,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import useCachedResources from "./hooks/useCachedResources";
 import useColorScheme from "./hooks/useColorScheme";
 import Navigation from "./navigation";
-import OnboardingScreen from "./screens/onboarding/OnboardingScreen";
+import CoverScreen from "./screens/cover/CoverScreen";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -13,7 +13,7 @@ export default function App() {
   if (!isLoadingComplete) {
     return null;
   } else {
-    return <OnboardingScreen></OnboardingScreen>;
+    return <Navigation colorScheme={colorScheme} />;
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />

@@ -13,23 +13,9 @@ const linking: LinkingOptions<RootStackParamList> = {
   prefixes: ["http://localhost*", "https://harits19.github.io/wedding-invitation-app"],
   config: {
     screens: {
-      Root: {
-        path: "/wedding-invitation-app",
-        screens: {
-          TabOne: {
-            screens: {
-              TabOneScreen: 'one',
-            },
-          },
-          TabTwo: {
-            screens: {
-              TabTwoScreen: 'two',
-            },
-          },
-        },
-      },
-      Modal: 'modal',
-      NotFound: '*',
+      Cover: {},
+      Bride: {},
+
     },
   },
 };
