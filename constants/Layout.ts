@@ -10,3 +10,6 @@ export default {
   },
   isSmallDevice: width < 375,
 };
+
+export const baseWidth = 500;
+export const baseHeight = 600;

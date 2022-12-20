@@ -3,6 +3,12 @@ import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
 
+export const FontRes = {
+  'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
+  'parisienne': require('../assets/fonts/Parisienne-Regular.ttf'),
+  'mate': require('../assets/fonts/MateSC-Regular.ttf')
+}
+
 export default function useCachedResources() {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
@@ -15,7 +21,7 @@ export default function useCachedResources() {
         // Load fonts
         await Font.loadAsync({
           ...FontAwesome.font,
-          'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
+          ...FontRes,
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
