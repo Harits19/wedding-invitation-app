@@ -4,7 +4,7 @@ import Duration from "../constants/Duration";
 
 export default function BottomUpView(props: ViewProps) {
   const marginTopAnimation = useRef(new Animated.Value(8)).current; // Initial value for opacity: 0
-
+  
   useEffect(() => {
     Animated.timing(marginTopAnimation, {
       toValue: 0,

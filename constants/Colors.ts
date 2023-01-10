@@ -4,6 +4,7 @@ const tintColorDark = '#fff';
 export default {
   biscay: '#1A365D',
   white: '#fff',
+  silver: '#ccc',
   light: {
     text: '#000',
     background: '#fff',

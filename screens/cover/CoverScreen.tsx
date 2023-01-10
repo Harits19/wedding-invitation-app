@@ -40,7 +40,10 @@ export default function CoverScreen({ navigation }: Props) {
           <View style={styles.expanded} />
           <InvitationButton
             onPress={() => {
-              navigation.navigate("Bride");
+              navigation.reset({
+                index: 0,
+                routes: [{ name: "Bride" }],
+              });
             }}
           />
         </View>

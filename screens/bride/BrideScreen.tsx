@@ -1,8 +1,10 @@
 import React from "react";
 import { View, Image, ScrollView } from "react-native";
 import { ImageAssets } from "../../assets/images/ImageAssets";
+import Carousel from "../../components/Carousel";
 import SmallView from "../../components/SmallView";
 import { MateText } from "../../components/StyledText";
+import { Text } from "../../components/Themed";
 import TopCircleView from "../../components/TopCircleView";
 import WindowView from "../../components/WindowView";
 import Colors from "../../constants/Colors";
@@ -12,13 +14,14 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 export default function BrideScreen() {
   const { width, height } = useWindowDimensions();
   return (
-    <ScrollView style={{ width: width }}>
+    <ScrollView
+      style={{
+        backgroundColor: "white",
+      }}
+    >
       <View style={{ height: 500 }}>
         <TopCircleView>
-          <Image
-            source={ImageAssets.background1}
-            style={[{ width: width, height: height }]}
-          />
+          <Carousel />
         </TopCircleView>
       </View>
       <View style={{ margin: Sizes[24] }}>
