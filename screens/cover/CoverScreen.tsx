@@ -1,4 +1,3 @@
-import { MaterialIcons } from "@expo/vector-icons";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
@@ -12,6 +11,8 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { RootStackParamList } from "../../types";
 import InvitationButton from "./components/InvitationButton";
 import TopCircleView from "../../components/TopCircleView";
+import FadeInView from "../../components/FadeInView";
+import BottomUpView from "../../components/BottomUpView";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Cover">;
 
@@ -26,9 +27,16 @@ export default function CoverScreen({ navigation }: Props) {
           style={[styles.image, { width: width, height: height }]}
         />
         <View style={styles.bodyImage}>
-          <ParisText style={styles.headerText}>AF</ParisText>
-          <MateText style={styles.h2}>Name 1 & Name 2</MateText>
-          <MateText style={styles.h3}>25.01.2027</MateText>
+          <FadeInView>
+            <ParisText style={styles.headerText}>AF</ParisText>
+          </FadeInView>
+          <FadeInView>
+            <BottomUpView>
+              <MateText style={styles.h2}>Fulan & Fulanah</MateText>
+              <MateText style={styles.h3}>25.01.2027</MateText>
+            </BottomUpView>
+          </FadeInView>
+
           <View style={styles.expanded} />
           <InvitationButton
             onPress={() => {
@@ -52,7 +60,7 @@ export default function CoverScreen({ navigation }: Props) {
 const styles = StyleSheet.create({
   headerText: { color: "white", fontSize: Sizes[48] },
   h2: { color: "white", fontSize: Sizes[32] },
-  h3: { color: "white", fontSize: Sizes[24] },
+  h3: { color: "white", fontSize: Sizes[24], textAlign: "center" },
   bottomContainer: {
     flex: 1,
     backgroundColor: Colors.biscay,
