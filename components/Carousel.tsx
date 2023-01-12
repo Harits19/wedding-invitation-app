@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Animated, Image, View } from "react-native";
 import { ImageAssets } from "../assets/images/ImageAssets";
 import Duration from "../constants/Duration";
@@ -7,38 +7,59 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 const items = [
   ImageAssets.background1,
   ImageAssets.background2,
-  ImageAssets.background1,
+  ImageAssets.background3,
 ];
 
+const startScale = 1;
+const endScale = 1.25;
+
 export default function Carousel() {
-  const opacity = useRef(new Animated.Value(1)).current;
+  const scale = useRef(new Animated.Value(startScale)).current;
   const { width, height } = useWindowDimensions();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const runAnimation = () => {
     Animated.sequence([
-      Animated.timing(opacity, {
-        toValue: 0,
-        duration: Duration.animation,
-        useNativeDriver: true,
+      Animated.timing(scale, {
+        toValue: endScale,
+        duration: 4000,
+        delay: 0,
+        useNativeDriver: false,
       }),
-      Animated.timing(opacity, {
-        toValue: 1,
-        duration: Duration.animation,
-        useNativeDriver: true,
-      }),
-    ]).start(() => runAnimation());
+    ]).start(() => {
+      scale.setValue(startScale);
+      setCurrentIndex((prev) => prev + 1);
+      runAnimation();
+    });
   };
   useEffect(() => {
     runAnimation();
   }, []);
 
+  const opacity = scale.interpolate({
+    inputRange: [startScale, 1.1, endScale],
+    outputRange: [1, 1, 0],
+  });
+
+  const frontImage = currentIndex % items.length;
+  const backImage = frontImage === items.length - 1 ? 0 : frontImage + 1;
+
   return (
     <View>
-      <Animated.View style={{ opacity }}>
-        <Image source={ImageAssets.background2} style={{ width, height }} />
+      <Animated.View style={{ position: "absolute" }}>
+        <Image source={items[backImage]} style={{ width, height }} />
       </Animated.View>
-      <Animated.View style={{ opacity, position: "absolute" }}>
-        <Image source={ImageAssets.background1} style={{ width, height }} />
+      <Animated.View
+        style={{
+          opacity,
+          transform: [
+            {
+              scale,
+            },
+          ],
+        }}
+      >
+        <Image source={items[frontImage]} style={{ width, height }} />
       </Animated.View>
     </View>
   );
