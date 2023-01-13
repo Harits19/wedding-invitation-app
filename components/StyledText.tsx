@@ -1,20 +1,12 @@
+import React from "react";
 import { FontRes } from "../hooks/useCachedResources";
-import { Text, TextProps } from "./Themed";
-
-export function MonoText(props: TextProps) {
-  return (
-    <Text
-      {...props}
-      style={[props.style, { fontFamily: Object.keys(FontRes)[0] }]}
-    />
-  );
-}
+import { TextProps, Text } from "react-native";
 
 export function ParisText(props: TextProps) {
   return (
     <Text
       {...props}
-      style={[props.style, { fontFamily: Object.keys(FontRes)[1] }]}
+      style={[{ fontFamily: Object.keys(FontRes)[1] }, props.style]}
     />
   );
 }
@@ -23,7 +15,10 @@ export function MateText(props: TextProps) {
   return (
     <Text
       {...props}
-      style={[props.style, { fontFamily: Object.keys(FontRes)[2] }]}
+      style={[
+        { fontFamily: Object.keys(FontRes)[2], color: "white" },
+        props.style,
+      ]}
     />
   );
 }

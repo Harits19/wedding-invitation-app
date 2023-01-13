@@ -9,4 +9,5 @@ export default {
   40: 40,
   48: 48,
   56: 56,
+  maxWidth: 412
 }

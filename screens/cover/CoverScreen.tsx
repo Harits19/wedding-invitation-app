@@ -1,18 +1,19 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, useWindowDimensions } from "react-native";
 import { ImageAssets } from "../../assets/images/ImageAssets";
-import WindowView from "../../components/WindowView";
 import { MateText, ParisText } from "../../components/StyledText";
 import Colors from "../../constants/Colors";
-import { Layout } from "../../constants/Layout";
 import Sizes from "../../constants/Sizes";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { RootStackParamList } from "../../types";
 import InvitationButton from "./components/InvitationButton";
 import TopCircleView from "../../components/TopCircleView";
 import FadeInView from "../../components/FadeInView";
 import BottomUpView from "../../components/BottomUpView";
+import CopyRightView from "../../components/CopyrightView";
+import IconView from "../../components/IconView";
+import ScaffoldView from "../../components/ScaffoldView";
+import ScaffoldWindowView from "../../components/ScaffoldWindowView";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Cover">;
 
@@ -20,48 +21,42 @@ export default function CoverScreen({ navigation }: Props) {
   const { width, height } = useWindowDimensions();
 
   return (
-    <WindowView style={{ backgroundColor: Colors.biscay }}>
-      <TopCircleView>
-        <Image
-          source={ImageAssets.background1}
-          style={[styles.image, { width: width, height: height }]}
-        />
-        <View style={styles.bodyImage}>
-          <FadeInView>
-            <ParisText style={styles.headerText}>AF</ParisText>
-          </FadeInView>
-          <FadeInView>
-            <BottomUpView>
-              <MateText style={styles.h2}>Fulan & Fulanah</MateText>
-              <MateText style={styles.h3}>25.01.2027</MateText>
-            </BottomUpView>
-          </FadeInView>
-
-          <View style={styles.expanded} />
-          <InvitationButton
-            onPress={() => {
-              navigation.reset({
-                index: 0,
-                routes: [{ name: "Bride" }],
-              });
-            }}
+    <ScaffoldWindowView>
+      <ScaffoldView style={{ height, backgroundColor: Colors.biscay }}>
+        <TopCircleView>
+          <Image
+            source={ImageAssets.background1}
+            style={[styles.image, { width: width, height: height }]}
           />
+          <View style={styles.bodyImage}>
+            <IconView />
+            <FadeInView>
+              <BottomUpView>
+                <MateText style={styles.h2}>Fulan & Fulanah</MateText>
+                <MateText style={styles.h3}>25.01.2027</MateText>
+              </BottomUpView>
+            </FadeInView>
+
+            <View style={styles.expanded} />
+            <InvitationButton
+              onPress={() => {
+                navigation.reset({
+                  index: 0,
+                  routes: [{ name: "Main" }],
+                });
+              }}
+            />
+          </View>
+        </TopCircleView>
+        <View style={styles.bottomContainer}>
+          <CopyRightView />
         </View>
-      </TopCircleView>
-      <View style={styles.bottomContainer}>
-        <View style={styles.bottomText}>
-          <MateText>Create with Love</MateText>
-        </View>
-        <View style={styles.bottomText}>
-          <MateText>2027 Name1&Name2. All Right Reserved</MateText>
-        </View>
-      </View>
-    </WindowView>
+      </ScaffoldView>
+    </ScaffoldWindowView>
   );
 }
 
 const styles = StyleSheet.create({
-  headerText: { color: "white", fontSize: Sizes[48] },
   h2: { color: "white", fontSize: Sizes[32] },
   h3: { color: "white", fontSize: Sizes[24], textAlign: "center" },
   bottomContainer: {
@@ -70,12 +65,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   expanded: { flex: 1 },
-
-  bottomText: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-  },
   bodyImage: {
     top: 0,
     bottom: 0,
@@ -88,8 +77,6 @@ const styles = StyleSheet.create({
     paddingVertical: Sizes[56],
   },
   image: {
-    width: Layout.window.width,
-    height: Layout.window.height,
     position: "absolute",
     zIndex: 2,
   },

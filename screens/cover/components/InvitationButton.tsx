@@ -1,8 +1,7 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import React, { useEffect } from "react";
-import { Pressable, Animated, Easing, PressableProps } from "react-native";
+import { Pressable, Animated, Easing, PressableProps, View } from "react-native";
 import { MateText } from "../../../components/StyledText";
-import { View } from "../../../components/Themed";
 import Colors from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
 

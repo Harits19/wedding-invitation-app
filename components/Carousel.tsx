@@ -1,8 +1,8 @@
+import React from "react";
 import { useEffect, useRef, useState } from "react";
-import { Animated, Image, View } from "react-native";
+import { Animated, Image, View, useWindowDimensions } from "react-native";
 import { ImageAssets } from "../assets/images/ImageAssets";
 import Duration from "../constants/Duration";
-import useWindowDimensions from "../hooks/useWindowDimensions";
 
 const items = [
   ImageAssets.background1,

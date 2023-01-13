@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Animated, ViewProps } from "react-native";
 import Duration from "../constants/Duration";
 

@@ -19,7 +19,7 @@ declare global {
 export type RootStackParamList = {
   Modal: undefined;
   Cover: undefined;
-  Bride: undefined;
+  Main: undefined;
   NotFound: undefined;
 };
 

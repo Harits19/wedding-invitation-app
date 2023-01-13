@@ -1,0 +1,1 @@
+type ColorModel = "dark" | "light";
