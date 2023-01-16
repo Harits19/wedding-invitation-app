@@ -1,14 +1,17 @@
+import { Entypo, EvilIcons, MaterialIcons } from "@expo/vector-icons";
 import React from "react";
-import { View } from "react-native";
+import { Image, View } from "react-native";
+import { ImageAssets } from "../../../assets/images/ImageAssets";
 import Carousel from "../../../components/Carousel";
-import { MateText } from "../../../components/StyledText";
+import { MateText, ParisText } from "../../../components/StyledText";
 import TopCircleView from "../../../components/TopCircleView";
 import Colors from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
+import UrlUtil from "../../../utils/UrlUtil";
 
 export default function BrideView() {
   return (
-    <>
+    <View style={{ alignItems: "center" }}>
       <View style={{ height: 500 }}>
         <TopCircleView>
           <Carousel />
@@ -35,8 +38,69 @@ export default function BrideView() {
           </MateText>
         </View>
       </View>
-
-      <MateText>Bride Screen</MateText>
-    </>
+      <MateText>Kepada Bapak/Ibu/Saudara/i,{"\n"}Haris</MateText>
+      <View style={{ height: Sizes[8] }} />
+      <MateText>
+        Dengan memohon rahmat dan ridho Allah Subhanahu wa Ta'ala, kami memohon
+        kehadiran Bapak/Ibu/Saudara/i pada acara pernikahan kami:
+      </MateText>
+      <BrideSection
+        nickName="Fulan"
+        fullName="Fulan S.Kom"
+        fatherName="H. Father"
+        motherName="Hj. Mother"
+        instagramAccount="abd.harits19"
+      />
+      <View style={{ height: Sizes[56] }} />
+      <BrideSection
+        nickName="Fulanah"
+        fullName="Fulanah S.Kom"
+        fatherName="H. Father"
+        motherName="Hj. Mother"
+        instagramAccount="abd.harits19"
+      />
+      <View style={{ height: Sizes[56] }} />
+    </View>
   );
 }
+
+const BrideSection = (props: {
+  nickName: string;
+  fullName: string;
+  motherName: string;
+  fatherName: string;
+  instagramAccount: string;
+}) => {
+  const imageSize = 240;
+  return (
+    <>
+      <View style={{ height: Sizes[16] }} />
+      <ParisText style={{ fontSize: Sizes[48] }}>{props.nickName}</ParisText>
+      <MateText type="light" style={{ fontSize: Sizes[24] }}>
+        {props.fullName}
+      </MateText>
+      <View style={{ height: Sizes[8] }} />
+      <MateText type="light" style={{ fontSize: Sizes[16] }}>
+        Putra dari Bapak {props.fatherName} , Dan Ibu {props.motherName}
+      </MateText>
+      <View style={{ height: Sizes[8] }} />
+      <Entypo
+        name="instagram-with-circle"
+        size={Sizes[32]}
+        onPress={() => {
+          UrlUtil.openNewTab(`https://www.instagram.com/${props.instagramAccount}/`);
+        }}
+        color={Colors.biscay}
+      />
+      <View style={{ height: Sizes[32] }} />
+      <Image
+        style={{
+          width: 160,
+          height: imageSize,
+          borderRadius: imageSize / 3,
+        }}
+        source={ImageAssets.background1}
+      />
+    </>
+  );
+};

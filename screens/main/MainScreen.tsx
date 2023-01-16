@@ -48,14 +48,10 @@ export default function MainScreen() {
     },
   ];
 
-  const iconProps = {
-    size: 40,
-    color: Colors.biscay,
-  };
-
   useEffect(() => {
     console.log("play audio");
     audio.play();
+    audio.loop = true;
   }, []);
 
   return (
@@ -70,20 +66,16 @@ export default function MainScreen() {
           position: "absolute",
           bottom: 0,
           right: 0,
-          margin: 24,
+          margin: 8,
           flexDirection: "row",
         }}
       >
-        <MaterialCommunityIcons
+        <FloatingIcon
           name={!isPlaying ? "play-circle" : "pause-circle"}
           onPress={toggleAudio}
-          {...iconProps}
         />
-        <MaterialCommunityIcons
-          name={"home-circle"}
-          onPress={toggleSideBar}
-          {...iconProps}
-        />
+        <View style={{ width: Sizes[4] }} />
+        <FloatingIcon name="home-circle" onPress={toggleSideBar} />
       </View>
       <SideBarView
         items={menus.map((e) => e.name)}
@@ -98,3 +90,24 @@ export default function MainScreen() {
     </ScaffoldWindowView>
   );
 }
+
+const FloatingIcon = (props: {
+  name: MaterialIconsNameModel;
+  onPress: () => void;
+}) => {
+  const size = Sizes[40];
+  return (
+    <MaterialCommunityIcons
+      name={props.name}
+      onPress={props.onPress}
+      style={{
+        backgroundColor: Colors.biscay,
+        borderRadius: size / 2,
+        borderWidth: 1,
+        borderColor: Colors.white,
+      }}
+      size={size}
+      color={Colors.white}
+    />
+  );
+};
