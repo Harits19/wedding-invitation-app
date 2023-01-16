@@ -107,7 +107,7 @@ export default function SideBarView({
                     textAlign: "right",
                   }}
                 >
-                  Home
+                  {item}
                 </MateText>
                 <View
                   style={{

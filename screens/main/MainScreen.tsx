@@ -9,6 +9,7 @@ import BrideView from "./components/BrideView";
 import Sizes from "../../constants/Sizes";
 import ScaffoldView from "../../components/ScaffoldView";
 import ScaffoldWindowView from "../../components/ScaffoldWindowView";
+import EventView from "./components/EventView";
 
 export default function MainScreen() {
   const { width, height } = useWindowDimensions();
@@ -28,11 +29,11 @@ export default function MainScreen() {
   const menus = [
     {
       view: <BrideView />,
-      name: "Home",
+      name: "Kedua Mempelai",
     },
     {
-      view: <BrideView />,
-      name: "Home",
+      view: <EventView />,
+      name: "Detail Acara",
     },
     {
       view: <BrideView />,
@@ -50,7 +51,7 @@ export default function MainScreen() {
 
   useEffect(() => {
     console.log("play audio");
-    audio.play();
+    // audio.play();
     audio.loop = true;
   }, []);
 
@@ -92,7 +93,7 @@ export default function MainScreen() {
 }
 
 const FloatingIcon = (props: {
-  name: MaterialIconsNameModel;
+  name: MaterialIconsCommunityNameModel;
   onPress: () => void;
 }) => {
   const size = Sizes[40];

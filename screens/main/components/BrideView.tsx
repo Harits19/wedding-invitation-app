@@ -17,7 +17,7 @@ export default function BrideView() {
           <Carousel />
         </TopCircleView>
       </View>
-      <View style={{ margin: Sizes[24] }}>
+      <View style={{ margin: Sizes[24], alignItems: "center" }}>
         <View
           style={{
             backgroundColor: Colors.biscay,
@@ -37,29 +37,29 @@ export default function BrideView() {
             (QS. Ar-Rum: 21)
           </MateText>
         </View>
+        <MateText>Kepada Bapak/Ibu/Saudara/i,{"\n"}Haris</MateText>
+        <View style={{ height: Sizes[8] }} />
+        <MateText>
+          Dengan memohon rahmat dan ridho Allah Subhanahu wa Ta'ala, kami
+          memohon kehadiran Bapak/Ibu/Saudara/i pada acara pernikahan kami:
+        </MateText>
+        <BrideSection
+          nickName="Fulan"
+          fullName="Fulan S.Kom"
+          fatherName="H. Father"
+          motherName="Hj. Mother"
+          instagramAccount="abd.harits19"
+        />
+        <View style={{ height: Sizes[56] }} />
+        <BrideSection
+          nickName="Fulanah"
+          fullName="Fulanah S.Kom"
+          fatherName="H. Father"
+          motherName="Hj. Mother"
+          instagramAccount="abd.harits19"
+        />
+        <View style={{ height: Sizes[56] }} />
       </View>
-      <MateText>Kepada Bapak/Ibu/Saudara/i,{"\n"}Haris</MateText>
-      <View style={{ height: Sizes[8] }} />
-      <MateText>
-        Dengan memohon rahmat dan ridho Allah Subhanahu wa Ta'ala, kami memohon
-        kehadiran Bapak/Ibu/Saudara/i pada acara pernikahan kami:
-      </MateText>
-      <BrideSection
-        nickName="Fulan"
-        fullName="Fulan S.Kom"
-        fatherName="H. Father"
-        motherName="Hj. Mother"
-        instagramAccount="abd.harits19"
-      />
-      <View style={{ height: Sizes[56] }} />
-      <BrideSection
-        nickName="Fulanah"
-        fullName="Fulanah S.Kom"
-        fatherName="H. Father"
-        motherName="Hj. Mother"
-        instagramAccount="abd.harits19"
-      />
-      <View style={{ height: Sizes[56] }} />
     </View>
   );
 }
@@ -80,7 +80,10 @@ const BrideSection = (props: {
         {props.fullName}
       </MateText>
       <View style={{ height: Sizes[8] }} />
-      <MateText type="light" style={{ fontSize: Sizes[16] }}>
+      <MateText
+        type="light"
+        style={{ fontSize: Sizes[16], textAlign: "center" }}
+      >
         Putra dari Bapak {props.fatherName} , Dan Ibu {props.motherName}
       </MateText>
       <View style={{ height: Sizes[8] }} />
@@ -88,7 +91,9 @@ const BrideSection = (props: {
         name="instagram-with-circle"
         size={Sizes[32]}
         onPress={() => {
-          UrlUtil.openNewTab(`https://www.instagram.com/${props.instagramAccount}/`);
+          UrlUtil.openNewTab(
+            `https://www.instagram.com/${props.instagramAccount}/`
+          );
         }}
         color={Colors.biscay}
       />
