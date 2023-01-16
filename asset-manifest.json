@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/wedding-invitation-app/static/js/app.b3b5af00.chunk.js",
-    "app.js.map": "/wedding-invitation-app/static/js/app.b3b5af00.chunk.js.map",
+    "app.js": "/wedding-invitation-app/static/js/app.25718375.chunk.js",
+    "app.js.map": "/wedding-invitation-app/static/js/app.25718375.chunk.js.map",
     "runtime~app.js": "/wedding-invitation-app/static/js/runtime~app.bbdef20a.js",
     "runtime~app.js.map": "/wedding-invitation-app/static/js/runtime~app.bbdef20a.js.map",
-    "static/js/2.f6ee59e7.chunk.js": "/wedding-invitation-app/static/js/2.f6ee59e7.chunk.js",
-    "static/js/2.f6ee59e7.chunk.js.map": "/wedding-invitation-app/static/js/2.f6ee59e7.chunk.js.map",
+    "static/js/2.599dc43e.chunk.js": "/wedding-invitation-app/static/js/2.599dc43e.chunk.js",
+    "static/js/2.599dc43e.chunk.js.map": "/wedding-invitation-app/static/js/2.599dc43e.chunk.js.map",
     "fonts/AntDesign.ttf": "/wedding-invitation-app/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/wedding-invitation-app/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/wedding-invitation-app/./fonts/Feather.ttf",
@@ -26,15 +26,15 @@
     "index.html": "/wedding-invitation-app/index.html",
     "manifest.json": "/wedding-invitation-app/manifest.json",
     "serve.json": "/wedding-invitation-app/serve.json",
-    "static/js/2.f6ee59e7.chunk.js.LICENSE.txt": "/wedding-invitation-app/static/js/2.f6ee59e7.chunk.js.LICENSE.txt",
+    "static/js/2.599dc43e.chunk.js.LICENSE.txt": "/wedding-invitation-app/static/js/2.599dc43e.chunk.js.LICENSE.txt",
     "static/media/background-1.jpg": "/wedding-invitation-app/static/media/background-1.d29de1cf.jpg",
     "static/media/background-2.jpeg": "/wedding-invitation-app/static/media/background-2.e521e9a7.jpeg",
     "static/media/background-3.png": "/wedding-invitation-app/static/media/background-3.18206d57.png",
-    "static/media/background-audio.mp3": "/wedding-invitation-app/static/media/background-audio.c0ce5153.mp3"
+    "static/media/background-audio.mp3": "/wedding-invitation-app/static/media/background-audio.bcec0cc5.mp3"
   },
   "entrypoints": [
     "static/js/runtime~app.bbdef20a.js",
-    "static/js/2.f6ee59e7.chunk.js",
-    "static/js/app.b3b5af00.chunk.js"
+    "static/js/2.599dc43e.chunk.js",
+    "static/js/app.25718375.chunk.js"
   ]
 }
