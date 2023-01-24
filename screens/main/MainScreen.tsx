@@ -10,6 +10,7 @@ import Sizes from "../../constants/Sizes";
 import ScaffoldView from "../../components/ScaffoldView";
 import ScaffoldWindowView from "../../components/ScaffoldWindowView";
 import EventView from "./components/EventView";
+import CountingDayView from "./components/CountingDayView";
 
 export default function MainScreen() {
   const { width, height } = useWindowDimensions();
@@ -40,7 +41,7 @@ export default function MainScreen() {
       name: "Home",
     },
     {
-      view: <BrideView />,
+      view: <CountingDayView />,
       name: "Home",
     },
     {
