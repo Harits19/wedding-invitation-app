@@ -20,8 +20,9 @@ export default function CountingDayView() {
   return (
     <ScaffoldView
       style={{
-        backgroundColor: Colors.biscay,
+        backgroundColor: Colors.geyser,
         alignItems: "center",
+        padding: 32,
         justifyContent: "center",
       }}
     >
@@ -30,7 +31,6 @@ export default function CountingDayView() {
           borderRadius: 16,
           backgroundColor: "white",
           alignSelf: "stretch",
-          marginHorizontal: 24,
         }}
       >
         <Image

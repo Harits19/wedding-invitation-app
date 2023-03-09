@@ -9,14 +9,12 @@ import Colors from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
 
 export default function EventView() {
-  const { height } = useWindowDimensions();
   return (
     <ScaffoldView
       style={{
         alignItems: "center",
         backgroundColor: Colors.biscay,
         padding: Sizes.s40,
-        height,
         justifyContent: "center",
       }}
     >

@@ -41,7 +41,7 @@ export default function WeddingGiftsView() {
   return (
     <ScaffoldView
       style={{
-        backgroundColor: Colors.geyser,
+        backgroundColor: Colors.biscay,
         justifyContent: "center",
       }}
     >
