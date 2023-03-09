@@ -7,6 +7,8 @@ import useColorScheme from "./hooks/useColorScheme";
 import Navigation from "./navigation";
 
 // TODO fix issue root url
+import CoverScreen from "./screens/cover/CoverScreen";
+import AttendanceConfirmationView from "./screens/main/components/AttendanceConfirmationView";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -15,7 +17,7 @@ export default function App() {
   if (!isLoadingComplete) {
     return null;
   } else {
-    // return <BrideView />;
+    return <AttendanceConfirmationView />;
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />

@@ -11,7 +11,8 @@ import ScaffoldView from "../../components/ScaffoldView";
 import ScaffoldWindowView from "../../components/ScaffoldWindowView";
 import EventView from "./components/EventView";
 import CountingDayView from "./components/CountingDayView";
-import WeddingGiftsView from "./components/WeddingGifsView";
+import WeddingGiftsView from "./components/WeddingGiftsView";
+import AttendanceConfirmationView from "./components/AttendanceConfirmationView";
 
 export default function MainScreen() {
   const { width, height } = useWindowDimensions();
@@ -40,6 +41,10 @@ export default function MainScreen() {
     {
       view: <CountingDayView />,
       name: "Menghitung Hari",
+    },
+    {
+      view: <AttendanceConfirmationView />,
+      name: "Konfirmasi Kehadiran",
     },
     {
       view: <WeddingGiftsView />,

@@ -4,7 +4,7 @@ import Sizes from "../constants/Sizes";
 import { MateText } from "./StyledText";
 
 export default function ScaffoldView({ style, ...props }: ViewProps) {
-  const { width } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
   return (
     <View
       style={[
@@ -14,6 +14,7 @@ export default function ScaffoldView({ style, ...props }: ViewProps) {
           overflow: "hidden",
           backgroundColor: "white",
           width,
+          minHeight: height
         },
         style,
       ]}
