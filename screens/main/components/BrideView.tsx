@@ -37,12 +37,19 @@ export default function BrideView() {
             (QS. Ar-Rum: 21)
           </MateText>
         </View>
-        <View style={{ height: Sizes.s16 }} />
+        <View style={{ height: Sizes.s24 }} />
         <MateText
           type="light"
           style={{ textAlign: "center", fontSize: Sizes.s16 }}
         >
-          Kepada Bapak/Ibu/Saudara/i,{"\n"}Haris
+          Kepada Bapak/Ibu/Saudara/i,
+        </MateText>
+        <View style={{ height: Sizes.s8 }} />
+        <MateText
+          type="light"
+          style={{ textAlign: "center", fontSize: Sizes.s16 }}
+        >
+          Haris
         </MateText>
         <View style={{ height: Sizes.s8 }} />
         <MateText
@@ -52,7 +59,7 @@ export default function BrideView() {
           Dengan memohon rahmat dan ridho Allah Subhanahu wa Ta'ala, kami
           memohon kehadiran Bapak/Ibu/Saudara/i pada acara pernikahan kami:
         </MateText>
-        <View style={{ height: Sizes.s16 }} />
+        <View style={{ height: Sizes.s24 }} />
         <BrideSection
           nickName="Fulan"
           fullName="Fulan S.Kom"

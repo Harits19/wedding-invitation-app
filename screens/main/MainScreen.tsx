@@ -11,6 +11,7 @@ import ScaffoldView from "../../components/ScaffoldView";
 import ScaffoldWindowView from "../../components/ScaffoldWindowView";
 import EventView from "./components/EventView";
 import CountingDayView from "./components/CountingDayView";
+import WeddingGiftsView from "./components/WeddingGifsView";
 
 export default function MainScreen() {
   const { width, height } = useWindowDimensions();
@@ -37,16 +38,12 @@ export default function MainScreen() {
       name: "Detail Acara",
     },
     {
-      view: <BrideView />,
-      name: "Home",
-    },
-    {
       view: <CountingDayView />,
-      name: "Home",
+      name: "Menghitung Hari",
     },
     {
-      view: <BrideView />,
-      name: "Home",
+      view: <WeddingGiftsView />,
+      name: "Tanda Kasih",
     },
   ];
 

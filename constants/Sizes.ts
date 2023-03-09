@@ -1,6 +1,7 @@
 
 
 export default {
+  s2: 2,
   s4: 4,
   s8: 8,
   s12: 12,
@@ -10,5 +11,6 @@ export default {
   s40: 40,
   s48: 48,
   s56: 56,
-  maxWidth: 412
+  maxWidth: 412,
+  borderWidth: 0.5,
 }
