@@ -10,7 +10,7 @@ export default function IconView({ color = "dark" }: { color?: ColorModel }) {
       <ParisText
         style={{
           color: color === "dark" ? "white" : Colors.biscay,
-          fontSize: Sizes[48],
+          fontSize: Sizes.s48,
           textAlign: "right",
         }}
       >

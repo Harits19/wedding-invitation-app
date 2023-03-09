@@ -13,8 +13,8 @@ export default function InvitationButton(props: PressableProps) {
         style={[
           {
             backgroundColor: Colors.biscay,
-            padding: Sizes[8],
-            borderRadius: Sizes[16],
+            padding: Sizes.s8,
+            borderRadius: Sizes.s16,
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
@@ -22,7 +22,7 @@ export default function InvitationButton(props: PressableProps) {
         ]}
       >
         <MaterialIcons name="mail" color={"white"} />
-        <View style={{ width: Sizes[8] }} />
+        <View style={{ width: Sizes.s8 }} />
         <MateText>Buka Undangan</MateText>
       </BouncingView>
     </Pressable>

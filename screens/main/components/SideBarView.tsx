@@ -90,7 +90,7 @@ export default function SideBarView({
             }}
           >
             <IconView color="light" />
-            <View style={{ height: Sizes[32] }} />
+            <View style={{ height: Sizes.s32 }} />
             {items.map((item, index) => (
               <TouchableOpacity
                 key={index}

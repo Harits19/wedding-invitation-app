@@ -57,8 +57,8 @@ export default function CoverScreen({ navigation }: Props) {
 }
 
 const styles = StyleSheet.create({
-  h2: { color: "white", fontSize: Sizes[32] },
-  h3: { color: "white", fontSize: Sizes[24], textAlign: "center" },
+  h2: { color: "white", fontSize: Sizes.s32 },
+  h3: { color: "white", fontSize: Sizes.s24, textAlign: "center" },
   bottomContainer: {
     flex: 1,
     backgroundColor: Colors.biscay,
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     position: "absolute",
     zIndex: 3,
-    paddingVertical: Sizes[56],
+    paddingVertical: Sizes.s56,
   },
   image: {
     position: "absolute",

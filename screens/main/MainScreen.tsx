@@ -76,7 +76,7 @@ export default function MainScreen() {
           name={!isPlaying ? "play-circle" : "pause-circle"}
           onPress={toggleAudio}
         />
-        <View style={{ width: Sizes[4] }} />
+        <View style={{ width: Sizes.s4 }} />
         <FloatingIcon name="home-circle" onPress={toggleSideBar} />
       </View>
       <SideBarView
@@ -97,7 +97,7 @@ const FloatingIcon = (props: {
   name: MaterialIconsCommunityNameModel;
   onPress: () => void;
 }) => {
-  const size = Sizes[40];
+  const size = Sizes.s40;
   return (
     <MaterialCommunityIcons
       name={props.name}

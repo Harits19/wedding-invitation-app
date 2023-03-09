@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Image, View } from "react-native";
 import { ImageAssets } from "../../../assets/images/ImageAssets";
 import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText, ParisText } from "../../../components/StyledText";
 import Colors from "../../../constants/Colors";
+import DayUtil from "../../../utils/DayUtil";
 
 export default function CountingDayView() {
+  const marriedDate = new Date(2024, 1, 25, 10, 30, 0);
+  const [today, setToday] = useState(new Date());
+  const { day, hour, minute, second } = DayUtil.count(today, marriedDate);
+
+  useEffect(() => {
+    setInterval(() => {
+      setToday(new Date());
+    }, 1000);
+  }, []);
+
   return (
     <ScaffoldView
       style={{
@@ -39,7 +50,12 @@ export default function CountingDayView() {
           </ParisText>
           <View style={{ height: 16 }} />
           <View style={{ flexDirection: "row", justifyContent: "center" }}>
-            {["Hari", "Jam", "Menit", "Detik"].map((e) => (
+            {[
+              { name: "Hari", value: day },
+              { name: "Jam", value: hour },
+              { name: "Menit", value: minute },
+              { name: "Detik", value: second },
+            ].map((e) => (
               <View
                 style={{
                   borderRadius: 16,
@@ -52,8 +68,8 @@ export default function CountingDayView() {
                   marginHorizontal: 4,
                 }}
               >
-                <MateText style={{ fontSize: 24 }}>0</MateText>
-                <MateText style={{ fontSize: 12 }}>{e}</MateText>
+                <MateText style={{ fontSize: 24 }}>{e.value}</MateText>
+                <MateText style={{ fontSize: 12 }}>{e.name}</MateText>
               </View>
             ))}
           </View>

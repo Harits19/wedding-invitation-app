@@ -17,12 +17,12 @@ export default function BrideView() {
           <Carousel />
         </TopCircleView>
       </View>
-      <View style={{ margin: Sizes[24], alignItems: "center" }}>
+      <View style={{ margin: Sizes.s24, alignItems: "center" }}>
         <View
           style={{
             backgroundColor: Colors.biscay,
-            borderRadius: Sizes[8],
-            padding: Sizes[24],
+            borderRadius: Sizes.s8,
+            padding: Sizes.s24,
           }}
         >
           <MateText style={{ textAlign: "center" }}>
@@ -32,17 +32,27 @@ export default function BrideView() {
             kasih dan sayang. Sungguh, pada yang demikian itu benar-benar
             terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
           </MateText>
-          <View style={{ height: Sizes[8] }} />
+          <View style={{ height: Sizes.s8 }} />
           <MateText style={{ fontWeight: "600", textAlign: "center" }}>
             (QS. Ar-Rum: 21)
           </MateText>
         </View>
-        <MateText>Kepada Bapak/Ibu/Saudara/i,{"\n"}Haris</MateText>
-        <View style={{ height: Sizes[8] }} />
-        <MateText>
+        <View style={{ height: Sizes.s16 }} />
+        <MateText
+          type="light"
+          style={{ textAlign: "center", fontSize: Sizes.s16 }}
+        >
+          Kepada Bapak/Ibu/Saudara/i,{"\n"}Haris
+        </MateText>
+        <View style={{ height: Sizes.s8 }} />
+        <MateText
+          type="light"
+          style={{ textAlign: "center", fontSize: Sizes.s16 }}
+        >
           Dengan memohon rahmat dan ridho Allah Subhanahu wa Ta'ala, kami
           memohon kehadiran Bapak/Ibu/Saudara/i pada acara pernikahan kami:
         </MateText>
+        <View style={{ height: Sizes.s16 }} />
         <BrideSection
           nickName="Fulan"
           fullName="Fulan S.Kom"
@@ -50,7 +60,7 @@ export default function BrideView() {
           motherName="Hj. Mother"
           instagramAccount="abd.harits19"
         />
-        <View style={{ height: Sizes[56] }} />
+        <View style={{ height: Sizes.s56 }} />
         <BrideSection
           nickName="Fulanah"
           fullName="Fulanah S.Kom"
@@ -58,7 +68,7 @@ export default function BrideView() {
           motherName="Hj. Mother"
           instagramAccount="abd.harits19"
         />
-        <View style={{ height: Sizes[56] }} />
+        <View style={{ height: Sizes.s56 }} />
       </View>
     </View>
   );
@@ -74,22 +84,22 @@ const BrideSection = (props: {
   const imageSize = 240;
   return (
     <>
-      <View style={{ height: Sizes[16] }} />
-      <ParisText style={{ fontSize: Sizes[48] }}>{props.nickName}</ParisText>
-      <MateText type="light" style={{ fontSize: Sizes[24] }}>
+      <View style={{ height: Sizes.s16 }} />
+      <ParisText style={{ fontSize: Sizes.s48 }}>{props.nickName}</ParisText>
+      <MateText type="light" style={{ fontSize: Sizes.s24 }}>
         {props.fullName}
       </MateText>
-      <View style={{ height: Sizes[8] }} />
+      <View style={{ height: Sizes.s8 }} />
       <MateText
         type="light"
-        style={{ fontSize: Sizes[16], textAlign: "center" }}
+        style={{ fontSize: Sizes.s16, textAlign: "center" }}
       >
         Putra dari Bapak {props.fatherName} , Dan Ibu {props.motherName}
       </MateText>
-      <View style={{ height: Sizes[8] }} />
+      <View style={{ height: Sizes.s8 }} />
       <Entypo
         name="instagram-with-circle"
-        size={Sizes[32]}
+        size={Sizes.s32}
         onPress={() => {
           UrlUtil.openNewTab(
             `https://www.instagram.com/${props.instagramAccount}/`
@@ -97,7 +107,7 @@ const BrideSection = (props: {
         }}
         color={Colors.biscay}
       />
-      <View style={{ height: Sizes[32] }} />
+      <View style={{ height: Sizes.s32 }} />
       <Image
         style={{
           width: 160,

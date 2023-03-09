@@ -15,33 +15,33 @@ export default function EventView() {
       style={{
         alignItems: "center",
         backgroundColor: Colors.biscay,
-        padding: Sizes[40],
+        padding: Sizes.s40,
         height,
         justifyContent: "center",
       }}
     >
       <IconView />
-      <View style={{ height: Sizes[16] }} />
-      <MateText style={{ fontSize: Sizes[24], textAlign: "center" }}>
+      <View style={{ height: Sizes.s16 }} />
+      <MateText style={{ fontSize: Sizes.s24, textAlign: "center" }}>
         “When we fall in love,{"\n"}it will be forever”
       </MateText>
-      <View style={{ height: Sizes[32] }} />
+      <View style={{ height: Sizes.s32 }} />
       <View
         style={{
           backgroundColor: Colors.linkWater,
-          borderRadius: Sizes[16],
-          padding: Sizes[16],
+          borderRadius: Sizes.s16,
+          padding: Sizes.s16,
         }}
       >
         <View
           style={{
             backgroundColor: Colors.white,
-            padding: Sizes[24],
-            borderRadius: Sizes[16],
+            padding: Sizes.s24,
+            borderRadius: Sizes.s16,
             alignItems: "center",
           }}
         >
-          <ParisText style={{ fontSize: Sizes[32], textAlign: "center" }}>
+          <ParisText style={{ fontSize: Sizes.s32, textAlign: "center" }}>
             Resepsi{"\n"}Pernikahan
           </ParisText>
           <View style={{ height: 16 }} />
@@ -61,7 +61,7 @@ export default function EventView() {
           <View style={{ height: 16 }} />
           <View style={{ flexDirection: "row" }}>
             <Button name="calendar-today" text="Ingatkan Saya" />
-            <View style={{ width: Sizes[8] }} />
+            <View style={{ width: Sizes.s8 }} />
             <Button name="location-pin" text="Lihat Peta" />
           </View>
         </View>
@@ -76,13 +76,13 @@ const Button = (props: { name: MaterialIconsNameModel; text: string }) => (
     style={{
       flexDirection: "row",
       alignItems: "center",
-      padding: Sizes[4],
+      padding: Sizes.s4,
       backgroundColor: Colors.biscay,
-      borderRadius: Sizes[4],
+      borderRadius: Sizes.s4,
     }}
   >
     <MaterialIcons name={props.name} color={Colors.white} />
-    <View style={{ width: Sizes[4] }} />
-    <MateText style={{ fontSize: Sizes[12] }}>{props.text}</MateText>
+    <View style={{ width: Sizes.s4 }} />
+    <MateText style={{ fontSize: Sizes.s12 }}>{props.text}</MateText>
   </BouncingView>
 );
