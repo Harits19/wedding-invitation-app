@@ -9,6 +9,7 @@ import Navigation from "./navigation";
 // TODO fix issue root url
 import CoverScreen from "./screens/cover/CoverScreen";
 import AttendanceConfirmationView from "./screens/main/components/AttendanceConfirmationView";
+import PrayerGreetingView from "./screens/main/components/PrayerGreetingView";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -17,7 +18,7 @@ export default function App() {
   if (!isLoadingComplete) {
     return null;
   } else {
-    // return <AttendanceConfirmationView />;
+    // return <PrayerGreetingView />;
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />

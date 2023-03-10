@@ -14,7 +14,7 @@ export default function MyTextInput(props: MyTextInputProps) {
       {...props}
       onFocus={() => setFocus(true)}
       onBlur={() => setFocus(false)}
-      style={[styles.input, !focus && styles.unFocus]}
+      style={[styles.input, !focus && styles.unFocus, props.style]}
     />
   );
 }

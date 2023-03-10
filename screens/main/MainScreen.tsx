@@ -13,6 +13,7 @@ import EventView from "./components/EventView";
 import CountingDayView from "./components/CountingDayView";
 import WeddingGiftsView from "./components/WeddingGiftsView";
 import AttendanceConfirmationView from "./components/AttendanceConfirmationView";
+import PrayerGreetingView from "./components/PrayerGreetingView";
 
 export default function MainScreen() {
   const { width, height } = useWindowDimensions();
@@ -49,6 +50,10 @@ export default function MainScreen() {
     {
       view: <WeddingGiftsView />,
       name: "Tanda Kasih",
+    },
+    {
+      view: <PrayerGreetingView />,
+      name: "Doa dan Ucapan",
     },
   ];
 
