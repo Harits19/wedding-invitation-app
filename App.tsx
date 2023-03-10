@@ -17,7 +17,7 @@ export default function App() {
   if (!isLoadingComplete) {
     return null;
   } else {
-    return <AttendanceConfirmationView />;
+    // return <AttendanceConfirmationView />;
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />

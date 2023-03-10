@@ -46,12 +46,9 @@ export default function MyDropdown<T>({
         <View
           style={{
             backgroundColor: Colors.white,
-            maxWidth: Sizes.maxWidth,
             padding: Sizes.s16,
-            alignSelf: "center",
             borderTopRightRadius: BORDER_TOP,
             borderTopLeftRadius: BORDER_TOP,
-            width: "100%",
           }}
         >
           {label}

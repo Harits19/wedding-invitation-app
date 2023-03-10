@@ -10,6 +10,7 @@ import {
   View,
 } from "react-native";
 import Colors from "../constants/Colors";
+import Sizes from "../constants/Sizes";
 import { MyViewProps } from "../models/MyViewProps";
 import showLog from "../ShowLog";
 import { MateText } from "./StyledText";
@@ -20,6 +21,13 @@ export interface BottomModalViewProps extends ModalProps {
 
 export default function BottomModalView(props: BottomModalViewProps) {
   const { width, height } = useWindowDimensions();
+
+  const backdrop = (
+    <Pressable
+      onPress={props.onPressBackdrop}
+      style={{ flex: 1, ...removeOutline }}
+    />
+  );
 
   return (
     <View>
@@ -33,16 +41,24 @@ export default function BottomModalView(props: BottomModalViewProps) {
         />
       </Modal>
       <Modal {...props} animationType="slide" transparent={true}>
-        <Pressable
-          onPress={props.onPressBackdrop}
-          style={{ flex: 1, ...removeOutline }}
-        />
-        {props.children}
+        {backdrop}
+        <View style={{ flexDirection: "row", justifyContent: "center" }}>
+          {backdrop}
+          <View
+            style={{
+              maxWidth: Sizes.maxWidth,
+              width: "100%",
+            }}
+          >
+            {props.children}
+          </View>
+          {backdrop}
+        </View>
       </Modal>
     </View>
   );
 }
 
 const removeOutline: MyViewProps = {
-  outlineStyle: 'none'
-}
+  outlineStyle: "none",
+};
