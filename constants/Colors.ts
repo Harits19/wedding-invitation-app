@@ -6,4 +6,5 @@ export default {
   anzac: "#e3a74b",
   bigStone: "#181e44",
   geyser: "#CFD7DB",
+  black: "#000000"
 };

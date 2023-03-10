@@ -3,9 +3,14 @@ import {
   Modal,
   ModalProps,
   Pressable,
+  StyleSheet,
+  TouchableHighlight,
+  TouchableOpacity,
   useWindowDimensions,
   View,
 } from "react-native";
+import Colors from "../constants/Colors";
+import { MyViewProps } from "../models/MyViewProps";
 import showLog from "../ShowLog";
 import { MateText } from "./StyledText";
 
@@ -19,7 +24,7 @@ export default function BottomModalView(props: BottomModalViewProps) {
   return (
     <View>
       <Modal {...props} animationType="fade" transparent={true}>
-        <View
+        <TouchableOpacity
           style={{
             width,
             height,
@@ -28,9 +33,16 @@ export default function BottomModalView(props: BottomModalViewProps) {
         />
       </Modal>
       <Modal {...props} animationType="slide" transparent={true}>
-        <Pressable onPress={props.onPressBackdrop} style={{ flex: 1 }} />
+        <Pressable
+          onPress={props.onPressBackdrop}
+          style={{ flex: 1, ...removeOutline }}
+        />
         {props.children}
       </Modal>
     </View>
   );
+}
+
+const removeOutline: MyViewProps = {
+  outlineStyle: 'none'
 }

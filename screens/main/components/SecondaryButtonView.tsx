@@ -13,6 +13,8 @@ export default function SecondaryButtonView(props: TouchableOpacityProps) {
           backgroundColor: Colors.white,
           borderColor: Colors.anzac,
           borderWidth: Sizes.s2,
+          alignItems: "center",
+          justifyContent: "center",
         },
         props.style,
       ]}
