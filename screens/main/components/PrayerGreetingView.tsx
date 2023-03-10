@@ -1,5 +1,6 @@
 import React from "react";
 import { ScrollView, useWindowDimensions, View } from "react-native";
+import WavyBackground from "react-native-wavy-background";
 import { ImageAssets } from "../../../assets/images/ImageAssets";
 import MyImage from "../../../components/MyImage";
 import MyTextInput from "../../../components/MyTextInput";
@@ -7,14 +8,44 @@ import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText, ParisText } from "../../../components/StyledText";
 import Colors from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
+import { withOpacity } from "../../../utils/ColorsUtil";
 import PrimaryButtonView from "./PrimaryButtonView";
 
 export default function PrayerGreetingView() {
-  const { height } = useWindowDimensions();
+  const { height, width } = useWindowDimensions();
+
+  const HEIGHT_WAVE = 200;
+
+  const Wave = ({
+    move = 1,
+    opacity = 0.5,
+    ...props
+  }: {
+    opacity?: number;
+    move?: number;
+  }) => {
+    return (
+      <View style={{ position: "absolute", right: 0, left: 0 }}>
+        <WavyBackground
+          height={HEIGHT_WAVE}
+          width={width}
+          amplitude={Sizes.s16}
+          frequency={1 / move}
+          offset={150}
+          color={withOpacity(Colors.biscay, opacity)}
+          bottom
+        />
+      </View>
+    );
+  };
+
   return (
     <ScaffoldView>
-      <MyImage source={ImageAssets.background3} style={{ padding: Sizes.s32 }}>
-        <View style={{ padding: Sizes.s32, height }}>
+      <MyImage
+        source={ImageAssets.background3}
+        style={{ padding: Sizes.s32, height: height + height / 4 }}
+      >
+        <View style={{ padding: Sizes.s32 }}>
           <ParisText
             style={{
               fontSize: Sizes.s32,
@@ -43,7 +74,10 @@ export default function PrayerGreetingView() {
             <MateText>Kirim</MateText>
           </PrimaryButtonView>
           <View style={{ height: Sizes.s32 }} />
-          <ScrollView style={{ flex: 1, flexShrink: 1 }}>
+          <ScrollView
+            style={{ height: 400 }}
+            // contentContainerStyle={{ paddingRight: Sizes.s16 }}
+          >
             {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((e) => (
               <Message
                 name="Harits"
@@ -52,6 +86,19 @@ export default function PrayerGreetingView() {
             ))}
           </ScrollView>
         </View>
+        <View style={{ height: HEIGHT_WAVE }}>
+          <Wave move={1} />
+          <Wave move={1.5} />
+          <Wave move={2} opacity={1} />
+        </View>
+
+        <View
+          style={{
+            height: 1000,
+            width: "100%",
+            backgroundColor: Colors.biscay,
+          }}
+        ></View>
       </MyImage>
     </ScaffoldView>
   );

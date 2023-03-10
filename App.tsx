@@ -10,6 +10,7 @@ import Navigation from "./navigation";
 import CoverScreen from "./screens/cover/CoverScreen";
 import AttendanceConfirmationView from "./screens/main/components/AttendanceConfirmationView";
 import PrayerGreetingView from "./screens/main/components/PrayerGreetingView";
+import MainScreen from "./screens/main/MainScreen";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -18,7 +19,7 @@ export default function App() {
   if (!isLoadingComplete) {
     return null;
   } else {
-    // return <PrayerGreetingView />;
+    return <PrayerGreetingView />;
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
