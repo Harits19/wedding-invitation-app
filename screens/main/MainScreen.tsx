@@ -67,6 +67,7 @@ export default function MainScreen() {
     <ScaffoldWindowView>
       <FlatList
         ref={menusRef}
+        showsVerticalScrollIndicator={false}
         data={menus.map((e) => e.view)}
         renderItem={({ item }) => <ScaffoldView>{item}</ScaffoldView>}
       />
