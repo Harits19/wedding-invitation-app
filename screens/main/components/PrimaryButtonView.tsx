@@ -5,7 +5,7 @@ import {
   View,
   ViewProps,
 } from "react-native";
-import Colors from "../../../constants/Colors";
+import Colors from "../../../constants/MyColors";
 import Sizes from "../../../constants/Sizes";
 
 export type PrimaryButtonViewProps = ViewProps &

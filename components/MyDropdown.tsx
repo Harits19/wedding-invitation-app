@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TouchableOpacity, View } from "react-native";
-import Colors from "../constants/Colors";
+import Colors from "../constants/MyColors";
 import Sizes from "../constants/Sizes";
 import BottomModalView from "./BottomModalView";
 import Divider from "./MyDivider";

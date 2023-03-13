@@ -1,6 +1,6 @@
 import React from "react";
 import { TouchableOpacity, TouchableOpacityProps, View } from "react-native";
-import Colors from "../../../constants/Colors";
+import Colors from "../../../constants/MyColors";
 import Sizes from "../../../constants/Sizes";
 import PrimaryButtonView from "./PrimaryButtonView";
 

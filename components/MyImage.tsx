@@ -5,10 +5,15 @@ export type MyImageProps = ImageProps & {
   children?: React.ReactNode;
 };
 
-export default function MyImage({ children, style, ...props }: MyImageProps) {
+export default function MyImage({
+  children,
+  style,
+  source,
+  ...props
+}: MyImageProps) {
   return (
     <View>
-      <Image {...props} style={[styles.body, style]} />
+      <Image source={source} {...props} style={[styles.body, style]} />
       <View style={{ zIndex: 1 }}>{children}</View>
     </View>
   );

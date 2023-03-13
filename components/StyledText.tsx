@@ -1,7 +1,7 @@
 import React from "react";
 import { FontRes } from "../hooks/useCachedResources";
 import { TextProps, Text } from "react-native";
-import Colors from "../constants/Colors";
+import Colors from "../constants/MyColors";
 
 export function ParisText(
   props: TextProps & {

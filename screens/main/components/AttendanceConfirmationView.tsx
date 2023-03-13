@@ -7,7 +7,7 @@ import MyImage from "../../../components/MyImage";
 import MyTextInput from "../../../components/MyTextInput";
 import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText } from "../../../components/StyledText";
-import Colors from "../../../constants/Colors";
+import Colors from "../../../constants/MyColors";
 import Sizes from "../../../constants/Sizes";
 import { guestName } from "../../../services/GuestService";
 import showLog from "../../../ShowLog";

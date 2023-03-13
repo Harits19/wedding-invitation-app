@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, TextProps, TextStyle, View } from "react-native";
-import Colors from "../constants/Colors";
+import Colors from "../constants/MyColors";
 import { MateText } from "./StyledText";
 
 export default function CopyRightView({

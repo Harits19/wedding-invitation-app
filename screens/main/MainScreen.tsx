@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { View, FlatList, useWindowDimensions, Text } from "react-native";
 import AudioAssets from "../../assets/audio/AudioAssets";
 import SideBarView from "./components/SideBarView";
-import Colors from "../../constants/Colors";
+import Colors from "../../constants/MyColors";
 import BrideView from "./components/BrideView";
 import Sizes from "../../constants/Sizes";
 import ScaffoldView from "../../components/ScaffoldView";

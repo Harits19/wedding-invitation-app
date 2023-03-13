@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText, ParisText } from "../../../components/StyledText";
-import Colors from "../../../constants/Colors";
+import Colors from "../../../constants/MyColors";
 import Sizes from "../../../constants/Sizes";
 import PrimaryButtonView from "./PrimaryButtonView";
 import EventView from "./EventView";

@@ -3,7 +3,7 @@ import React from "react";
 import { View, Image, StyleSheet, useWindowDimensions } from "react-native";
 import { ImageAssets } from "../../assets/images/ImageAssets";
 import { MateText, ParisText } from "../../components/StyledText";
-import Colors from "../../constants/Colors";
+import Colors from "../../constants/MyColors";
 import Sizes from "../../constants/Sizes";
 import { RootStackParamList } from "../../types";
 import InvitationButton from "./components/InvitationButton";

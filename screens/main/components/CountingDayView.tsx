@@ -3,7 +3,7 @@ import { Image, View } from "react-native";
 import { ImageAssets } from "../../../assets/images/ImageAssets";
 import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText, ParisText } from "../../../components/StyledText";
-import Colors from "../../../constants/Colors";
+import Colors from "../../../constants/MyColors";
 import DayUtil from "../../../utils/DayUtil";
 
 export default function CountingDayView() {

@@ -3,7 +3,7 @@ import React from "react";
 import { Pressable, PressableProps, View } from "react-native";
 import BouncingView from "../../../components/BouncingView";
 import { MateText } from "../../../components/StyledText";
-import Colors from "../../../constants/Colors";
+import Colors from "../../../constants/MyColors";
 import Sizes from "../../../constants/Sizes";
 
 export default function InvitationButton(props: PressableProps) {

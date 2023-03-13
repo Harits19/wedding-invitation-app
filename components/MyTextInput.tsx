@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, TextInput, TextInputProps } from "react-native";
-import Colors from "../constants/Colors";
+import Colors from "../constants/MyColors";
 import Sizes from "../constants/Sizes";
 import { FontRes } from "../hooks/useCachedResources";
 import { withOpacity } from "../utils/ColorsUtil";

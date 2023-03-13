@@ -5,7 +5,7 @@ import { ImageAssets } from "../../../assets/images/ImageAssets";
 import Carousel from "../../../components/Carousel";
 import { MateText, ParisText } from "../../../components/StyledText";
 import TopCircleView from "../../../components/TopCircleView";
-import Colors from "../../../constants/Colors";
+import Colors from "../../../constants/MyColors";
 import Sizes from "../../../constants/Sizes";
 import UrlUtil from "../../../utils/UrlUtil";
 

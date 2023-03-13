@@ -19,7 +19,7 @@ export default function App() {
   if (!isLoadingComplete) {
     return null;
   } else {
-    return <PrayerGreetingView />;
+    // return <PrayerGreetingView />;
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
