@@ -6,7 +6,7 @@ import Sizes from "../../../constants/Sizes";
 import PrimaryButtonView from "../../../components/PrimaryButtonView";
 import { styles } from "./styles";
 
-export default function SendGiftBody() {
+export default function SendGiftView() {
   return (
     <>
       <MateText style={styles.address}>

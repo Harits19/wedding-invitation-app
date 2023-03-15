@@ -5,9 +5,9 @@ import Sizes from "../constants/Sizes";
 import { FontResV3 } from "../hooks/useCachedResources";
 import { withOpacity } from "../utils/ColorsUtil";
 
-export type MyTextInputProps = TextInputProps;
+export type TextInputViewProps = TextInputProps;
 
-export default function MyTextInput(props: MyTextInputProps) {
+export default function TextInputView(props: TextInputViewProps) {
   const [focus, setFocus] = useState(false);
   return (
     <TextInput

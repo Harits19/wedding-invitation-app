@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native";
 import Sizes from "../constants/Sizes";
-import { MyViewProps } from "../models/MyViewProps";
+import { OutlineStyleModel } from "../models/OutlineStyleModel";
 
 export interface BottomModalViewProps extends ModalProps {
   onPressBackdrop?: () => void;
@@ -54,6 +54,6 @@ export default function BottomModalView(props: BottomModalViewProps) {
   );
 }
 
-const removeOutline: MyViewProps = {
+const removeOutline: OutlineStyleModel = {
   outlineStyle: "none",
 };

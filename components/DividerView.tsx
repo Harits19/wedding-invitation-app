@@ -4,7 +4,7 @@ import { Colors } from "../constants/Colors";
 import Sizes from "../constants/Sizes";
 import { withOpacity } from "../utils/ColorsUtil";
 
-export default function Divider() {
+export default function DividerView() {
   return (
     <View
       style={{

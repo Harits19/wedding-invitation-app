@@ -1,15 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import { View, TouchableOpacity } from "react-native";
-import CheckBox from "../../../components/CheckBox";
-import MyTextInput from "../../../components/MyTextInput";
+import CheckBoxView from "../../../components/CheckBoxView";
+import TextInputView from "../../../components/TextInputView";
 import { MateText } from "../../../components/StyledText";
 import { Colors } from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
 import PrimaryButtonView from "../../../components/PrimaryButtonView";
 import { styles } from "./styles";
 
-export default function ConfirmationBody(props: { onFinish: () => void }) {
+export default function ConfirmationView(props: { onFinish: () => void }) {
   const GIFT_TYPE = [
     { id: "send_gift", value: "Kirim Hadiah" },
     { id: "bank_transfer", value: "Bank Transfer" },
@@ -25,9 +25,9 @@ export default function ConfirmationBody(props: { onFinish: () => void }) {
         kolom di bawah untuk mempermudah pendataan:
       </MateText>
       <View style={{ height: Sizes.s16 }} />
-      <MyTextInput placeholder="Nama" />
+      <TextInputView placeholder="Nama" />
       <View style={{ height: Sizes.s12 }} />
-      <MyTextInput placeholder="Nomor Hp" />
+      <TextInputView placeholder="Nomor Hp" />
       <View style={{ height: Sizes.s24 }} />
       <MateText style={[styles.address, { textAlign: "left" }]}>
         Jenis Tanda Kasih
@@ -49,7 +49,7 @@ export default function ConfirmationBody(props: { onFinish: () => void }) {
             }}
           >
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <CheckBox value={checked} />
+              <CheckBoxView value={checked} />
               <View style={{ width: Sizes.s12 }} />
               <MateText style={styles.address}>{e.value}</MateText>
             </View>
@@ -58,7 +58,7 @@ export default function ConfirmationBody(props: { onFinish: () => void }) {
         );
       })}
       <View style={{ height: Sizes.s16 }} />
-      <MyTextInput
+      <TextInputView
         multiline={true}
         numberOfLines={3}
         placeholder="Tulis Pesan"

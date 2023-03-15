@@ -7,7 +7,7 @@ import Sizes from "../../../constants/Sizes";
 import PrimaryButtonView from "../../../components/PrimaryButtonView";
 import { styles } from "./styles";
 
-export default function BankTransferBody() {
+export default function BankTransferView() {
   return (
     <View style={{ alignItems: "center" }}>
       <MateText style={styles.address}>

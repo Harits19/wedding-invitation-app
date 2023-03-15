@@ -2,9 +2,11 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { ImageAssets } from "../../../assets/images/ImageAssets";
-import MyDropdown, { MyDropdownItem } from "../../../components/MyDropdown";
-import MyImage from "../../../components/MyImage";
-import MyTextInput from "../../../components/MyTextInput";
+import DropdownView, {
+  DropdownViewItem,
+} from "../../../components/DropdownView";
+import ImageView from "../../../components/ImageView";
+import TextInputView from "../../../components/TextInputView";
 import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText } from "../../../components/StyledText";
 import { Colors } from "../../../constants/Colors";
@@ -21,7 +23,7 @@ export default function AttendanceConfirmationView() {
 
   return (
     <ScaffoldView style={{ justifyContent: "center", padding: Sizes.s32 }}>
-      <MyImage source={ImageAssets.background2} style={styles.body}>
+      <ImageView source={ImageAssets.background2} style={styles.body}>
         <View style={{ padding: Sizes.s16 }}>
           <MateText
             style={{
@@ -42,13 +44,13 @@ export default function AttendanceConfirmationView() {
               padding: Sizes.s24,
             }}
           >
-            <MyTextInput placeholder="Nama" defaultValue={guestName} />
+            <TextInputView placeholder="Nama" defaultValue={guestName} />
             <View style={{ height: Sizes.s8 }} />
-            <MyTextInput placeholder="No Hp" />
+            <TextInputView placeholder="No Hp" />
             <View style={{ height: Sizes.s8 }} />
-            <MyTextInput placeholder="Alamat" />
+            <TextInputView placeholder="Alamat" />
             <View style={{ height: Sizes.s8 }} />
-            <MyDropdown
+            <DropdownView
               value={attend}
               label="Apakah Anda akan membawa partner?"
               items={[true, false].map((e) => {
@@ -57,14 +59,14 @@ export default function AttendanceConfirmationView() {
                   text: e
                     ? "Ya, Saya akan hadir"
                     : "Tidak, Saya tidak bisa hadir",
-                } as MyDropdownItem<boolean>;
+                } as DropdownViewItem<boolean>;
               })}
               onChangeValue={(val) => {
                 setAttend(val);
               }}
             />
             <View style={{ height: Sizes.s8 }} />
-            <MyDropdown
+            <DropdownView
               value={withPartner}
               label="Apakah Anda akan membawa partner?"
               items={[true, false].map((e) => {
@@ -73,7 +75,7 @@ export default function AttendanceConfirmationView() {
                   text: e
                     ? "Ya, Saya akan membawa 1 partner"
                     : "Tidak, Saya akan datang sendiri",
-                } as MyDropdownItem<boolean>;
+                } as DropdownViewItem<boolean>;
               })}
               onChangeValue={(val) => {
                 setWithPartner(val);
@@ -89,7 +91,7 @@ export default function AttendanceConfirmationView() {
             </SecondaryButtonView>
           </View>
         </View>
-      </MyImage>
+      </ImageView>
     </ScaffoldView>
   );
 }

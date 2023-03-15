@@ -4,13 +4,13 @@ import { TouchableOpacity, View } from "react-native";
 import { Colors } from "../constants/Colors";
 import Sizes from "../constants/Sizes";
 
-const CHECK_BOX_SIZE = Sizes.s16;
-
 export interface CheckBoxProps {
   value?: boolean;
 }
 
-export default function CheckBox({ value = false }: CheckBoxProps) {
+export default function CheckBoxView({ value = false }: CheckBoxProps) {
+  const CHECK_BOX_SIZE = Sizes.s16;
+
   return (
     <View
       style={{

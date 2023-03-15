@@ -3,8 +3,8 @@ import { Image, ScrollView, useWindowDimensions, View } from "react-native";
 import WavyBackground from "react-native-wavy-background";
 import { ImageAssets } from "../../../assets/images/ImageAssets";
 import IconView from "../../../components/IconView";
-import MyImage from "../../../components/MyImage";
-import MyTextInput from "../../../components/MyTextInput";
+import ImageView from "../../../components/ImageView";
+import TextInputView from "../../../components/TextInputView";
 import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText, ParisText } from "../../../components/StyledText";
 import { Colors } from "../../../constants/Colors";
@@ -18,7 +18,7 @@ export default function PrayerGreetingView() {
 
   return (
     <ScaffoldView>
-      <MyImage
+      <ImageView
         source={ImageAssets.background3}
         style={{ padding: Sizes.s32, height: height + height / 4 }}
       >
@@ -37,12 +37,12 @@ export default function PrayerGreetingView() {
             Silakan kirimkan doa dan ucapan{"\n"}yang tulus untuk kami:
           </MateText>
           <View style={{ height: Sizes.s24 }} />
-          <MyTextInput
+          <TextInputView
             placeholder="Nama Anda"
             style={{ backgroundColor: Colors.white, color: Colors.biscay }}
           />
           <View style={{ height: Sizes.s8 }} />
-          <MyTextInput
+          <TextInputView
             placeholder="Doa & Ucapan"
             style={{ backgroundColor: Colors.white, color: Colors.biscay }}
           />
@@ -63,7 +63,7 @@ export default function PrayerGreetingView() {
             ))}
           </ScrollView>
         </View>
-      </MyImage>
+      </ImageView>
       <View style={{ height: HEIGHT_WAVE }}>
         <Wave move={1} />
         <Wave move={1.5} />

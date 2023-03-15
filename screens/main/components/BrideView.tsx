@@ -2,7 +2,7 @@ import { Entypo, EvilIcons, MaterialIcons } from "@expo/vector-icons";
 import React from "react";
 import { Image, View } from "react-native";
 import { ImageAssets } from "../../../assets/images/ImageAssets";
-import Carousel from "../../../components/Carousel";
+import CarouselView from "../../../components/CarouselView";
 import { MateText, ParisText } from "../../../components/StyledText";
 import TopCircleView from "../../../components/TopCircleView";
 import { Colors } from "../../../constants/Colors";
@@ -15,7 +15,7 @@ export default function BrideView() {
     <View style={{ alignItems: "center" }}>
       <View style={{ height: 500 }}>
         <TopCircleView>
-          <Carousel />
+          <CarouselView />
         </TopCircleView>
       </View>
       <View style={{ margin: Sizes.s24, alignItems: "center" }}>

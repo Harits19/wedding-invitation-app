@@ -4,7 +4,7 @@ import { Animated, Image, View, useWindowDimensions } from "react-native";
 import { ImageAssets } from "../assets/images/ImageAssets";
 import Duration from "../constants/Duration";
 
-export default function Carousel() {
+export default function CarouselView() {
   const ITEMS = [
     ImageAssets.background1,
     ImageAssets.background2,

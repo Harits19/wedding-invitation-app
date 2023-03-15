@@ -3,29 +3,30 @@ import { TouchableOpacity, View } from "react-native";
 import { Colors } from "../constants/Colors";
 import Sizes from "../constants/Sizes";
 import BottomModalView from "./BottomModalView";
-import Divider from "./MyDivider";
-import MyTextInput, { MyTextInputProps } from "./MyTextInput";
+import DividerView from "./DividerView";
+import TextInputView, { TextInputViewProps } from "./TextInputView";
 import { MateText } from "./StyledText";
 
-export type MyDropdownItem<T> = {
+export type DropdownViewItem<T> = {
   value: T;
   text: string;
 };
 
-export interface MyDropdownProps<T> {
-  items: MyDropdownItem<T>[];
+export interface DropdownViewProps<T> {
+  items: DropdownViewItem<T>[];
   label?: string;
   onChangeValue?: (value: T) => void;
   value?: T;
 }
 
-const BORDER_TOP = Sizes.s16;
-export default function MyDropdown<T>({
+export default function DropdownView<T>({
   items,
   onChangeValue,
   value,
   ...props
-}: MyDropdownProps<T>) {
+}: DropdownViewProps<T>) {
+  const BORDER_TOP = Sizes.s16;
+
   const [modal, setModal] = useState(false);
   const selectedDropdown = items.find(
     (e) => JSON.stringify(e.value) === JSON.stringify(value)
@@ -40,7 +41,7 @@ export default function MyDropdown<T>({
     <View>
       {props.label && label}
       <TouchableOpacity onPress={() => setModal(true)}>
-        <MyTextInput pointerEvents="none" value={selectedDropdown?.text} />
+        <TextInputView pointerEvents="none" value={selectedDropdown?.text} />
       </TouchableOpacity>
       <BottomModalView visible={modal} onPressBackdrop={() => setModal(false)}>
         <View
@@ -53,7 +54,7 @@ export default function MyDropdown<T>({
         >
           {label}
           <View style={{ height: Sizes.s8 }} />
-          <Divider />
+          <DividerView />
           <View style={{ height: Sizes.s16 }} />
           {items.map((e, index) => (
             <TouchableOpacity

@@ -16,11 +16,11 @@ import SecondaryButtonView from "../../../components/SecondaryButtonView";
 import BouncingView from "../../../components/BouncingView";
 import ModalDetailView from "./ModalDetailView";
 import { ImageAssets } from "../../../assets/images/ImageAssets";
-import MyTextInput from "../../../components/MyTextInput";
-import CheckBox from "../../../components/CheckBox";
-import ConfirmationBody from "./ConfirmationBody";
-import BankTransferBody from "./BankTransferBody";
-import SendGiftBody from "./SendGiftBody";
+import TextInputView from "../../../components/TextInputView";
+import CheckBoxView from "../../../components/CheckBoxView";
+import ConfirmationView from "./ConfirmationView";
+import BankTransferView from "./BankTransferView";
+import SendGiftView from "./SendGiftView";
 
 export default function WeddingGiftsView() {
   const [modalSendGift, setModalLocation] = useState(false);
@@ -96,7 +96,7 @@ export default function WeddingGiftsView() {
           visible={modalSendGift}
           onPressBackdrop={() => setModalLocation(false)}
         >
-          <SendGiftBody />
+          <SendGiftView />
         </ModalDetailView>
 
         <ModalDetailView
@@ -104,14 +104,14 @@ export default function WeddingGiftsView() {
           visible={modalBankTransfer}
           onPressBackdrop={() => setModalBankTransfer(false)}
         >
-          <BankTransferBody />
+          <BankTransferView />
         </ModalDetailView>
         <ModalDetailView
           visible={modalConfirmation}
           onPressBackdrop={() => setModalConfirmation(false)}
           title="Konfirmasi"
         >
-          <ConfirmationBody onFinish={() => setModalConfirmation(false)} />
+          <ConfirmationView onFinish={() => setModalConfirmation(false)} />
         </ModalDetailView>
       </View>
     </ScaffoldView>

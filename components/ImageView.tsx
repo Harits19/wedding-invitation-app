@@ -1,16 +1,16 @@
 import React from "react";
 import { Image, ImageProps, StyleSheet, View, ViewStyle } from "react-native";
 
-export type MyImageProps = ImageProps & {
+export type ImageViewProps = ImageProps & {
   children?: React.ReactNode;
 };
 
-export default function MyImage({
+export default function ImageView({
   children,
   style,
   source,
   ...props
-}: MyImageProps) {
+}: ImageViewProps) {
   return (
     <View>
       <Image source={source} {...props} style={[styles.body, style]} />
