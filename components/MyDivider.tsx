@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import Colors from "../constants/MyColors";
+import { Colors } from "../constants/Colors";
 import Sizes from "../constants/Sizes";
 import { withOpacity } from "../utils/ColorsUtil";
 

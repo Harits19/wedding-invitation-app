@@ -1,5 +1,5 @@
 import React from "react";
-import Colors from "../constants/MyColors";
+import { Colors } from "../constants/Colors";
 import Sizes from "../constants/Sizes";
 import FadeInView from "./FadeInView";
 import { ParisText } from "./StyledText";

@@ -7,11 +7,11 @@ import MyImage from "../../../components/MyImage";
 import MyTextInput from "../../../components/MyTextInput";
 import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText } from "../../../components/StyledText";
-import Colors from "../../../constants/MyColors";
+import { Colors } from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
 import { guestName } from "../../../services/GuestService";
 import showLog from "../../../ShowLog";
-import SecondaryButtonView from "./SecondaryButtonView";
+import SecondaryButtonView from "../../../components/SecondaryButtonView";
 
 export default function AttendanceConfirmationView() {
   const [attend, setAttend] = useState(false);

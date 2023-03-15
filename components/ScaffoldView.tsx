@@ -13,7 +13,6 @@ export default function ScaffoldView({ style, ...props }: ViewProps) {
           alignSelf: "center",
           overflow: "hidden",
           backgroundColor: "white",
-          width,
         },
         style,
       ]}

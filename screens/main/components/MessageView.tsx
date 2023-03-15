@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 import { View } from "react-native";
 import { MateText } from "../../../components/StyledText";
-import MyColors from "../../../constants/MyColors";
+import { Colors } from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
 
 const MessageView = ({
@@ -21,9 +21,9 @@ const MessageView = ({
           width: SIZE,
           height: SIZE,
           borderRadius: SIZE / 2,
-          backgroundColor: MyColors.anzac,
+          backgroundColor: Colors.anzac,
           borderWidth: Sizes.s4,
-          borderColor: MyColors.white,
+          borderColor: Colors.white,
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -33,7 +33,7 @@ const MessageView = ({
       <View style={{ width: Sizes.s8 }} />
       <View
         style={{
-          backgroundColor: MyColors.white,
+          backgroundColor: Colors.white,
           padding: Sizes.s16,
           flex: 1,
           borderTopRightRadius: BORDER_RADIUS,
@@ -41,9 +41,9 @@ const MessageView = ({
           borderBottomLeftRadius: BORDER_RADIUS,
         }}
       >
-        <MateText style={{ color: MyColors.anzac }}>{name}</MateText>
+        <MateText style={{ color: Colors.anzac }}>{name}</MateText>
         <View style={{ height: Sizes.s8 }} />
-        <MateText style={{ color: MyColors.biscay }}>{message}</MateText>
+        <MateText style={{ color: Colors.biscay }}>{message}</MateText>
       </View>
     </View>
   );

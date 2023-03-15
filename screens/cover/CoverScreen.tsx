@@ -1,12 +1,17 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React from "react";
-import { View, Image, StyleSheet, useWindowDimensions } from "react-native";
+import {
+  View,
+  Image,
+  StyleSheet,
+  useWindowDimensions,
+  Pressable,
+} from "react-native";
 import { ImageAssets } from "../../assets/images/ImageAssets";
 import { MateText, ParisText } from "../../components/StyledText";
-import Colors from "../../constants/MyColors";
+import { Colors } from "../../constants/Colors";
 import Sizes from "../../constants/Sizes";
 import { RootStackParamList } from "../../types";
-import InvitationButton from "./components/InvitationButton";
 import TopCircleView from "../../components/TopCircleView";
 import FadeInView from "../../components/FadeInView";
 import BottomUpView from "../../components/BottomUpView";
@@ -14,6 +19,8 @@ import CopyRightView from "../../components/CopyrightView";
 import IconView from "../../components/IconView";
 import ScaffoldView from "../../components/ScaffoldView";
 import ScaffoldWindowView from "../../components/ScaffoldWindowView";
+import BouncingView from "../../components/BouncingView";
+import { MaterialIcons } from "@expo/vector-icons";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Cover">;
 
@@ -38,14 +45,31 @@ export default function CoverScreen({ navigation }: Props) {
             </FadeInView>
 
             <View style={styles.expanded} />
-            <InvitationButton
+            <Pressable
               onPress={() => {
                 navigation.reset({
                   index: 0,
                   routes: [{ name: "Main" }],
                 });
               }}
-            />
+            >
+              <BouncingView
+                style={[
+                  {
+                    backgroundColor: Colors.biscay,
+                    padding: Sizes.s8,
+                    borderRadius: Sizes.s16,
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  },
+                ]}
+              >
+                <MaterialIcons name="mail" color={"white"} />
+                <View style={{ width: Sizes.s8 }} />
+                <MateText>Buka Undangan</MateText>
+              </BouncingView>
+            </Pressable>
           </View>
         </TopCircleView>
         <View style={styles.bottomContainer}>

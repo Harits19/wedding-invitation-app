@@ -1,15 +1,24 @@
-import { FontAwesome } from '@expo/vector-icons';
-import * as Font from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect, useState } from 'react';
+import { FontAwesome } from "@expo/vector-icons";
+import * as Font from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
+import { useEffect, useState } from "react";
 
-export const FontRes = {
-  'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
-  'parisienne': require('../assets/fonts/Parisienne-Regular.ttf'),
-  'mate': require('../assets/fonts/MateSC-Regular.ttf')
-}
+export const FontResV3 = {
+  spaceMono: {
+    name: "space-mono",
+    path: require("../assets/fonts/SpaceMono-Regular.ttf"),
+  },
+  parisienne: {
+    name: "parisienne",
+    path: require("../assets/fonts/Parisienne-Regular.ttf"),
+  },
+  mate: {
+    name: "mate",
+    path: require("../assets/fonts/MateSC-Regular.ttf"),
+  },
+};
 
-export default function  useCachedResources() {
+export default function useCachedResources() {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
   // Load any resources or data that we need prior to rendering the app
@@ -21,7 +30,9 @@ export default function  useCachedResources() {
         // Load fonts
         await Font.loadAsync({
           ...FontAwesome.font,
-          ...FontRes,
+          ...Object.values(FontResV3)
+            .map((val) => val)
+            .reduce((a, v) => ({ ...a, [v.name]: v.path }), {}),
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service

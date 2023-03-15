@@ -5,7 +5,7 @@ import BottomModalView, {
   BottomModalViewProps,
 } from "../../../components/BottomModalView";
 import { ParisText } from "../../../components/StyledText";
-import Colors from "../../../constants/MyColors";
+import { Colors } from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
 
 export default function ModalDetailView(

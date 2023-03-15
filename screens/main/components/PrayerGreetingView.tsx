@@ -7,11 +7,11 @@ import MyImage from "../../../components/MyImage";
 import MyTextInput from "../../../components/MyTextInput";
 import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText, ParisText } from "../../../components/StyledText";
-import Colors from "../../../constants/MyColors";
+import { Colors } from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
 import { withOpacity } from "../../../utils/ColorsUtil";
 import MessageView from "./MessageView";
-import PrimaryButtonView from "./PrimaryButtonView";
+import PrimaryButtonView from "../../../components/PrimaryButtonView";
 
 export default function PrayerGreetingView() {
   const { height } = useWindowDimensions();

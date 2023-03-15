@@ -1,4 +1,4 @@
-export default {
+export const Colors = {
   biscay: "#1A365D",
   white: "#ffffff",
   silver: "#cccccc",
@@ -6,5 +6,7 @@ export default {
   anzac: "#e3a74b",
   bigStone: "#181e44",
   geyser: "#CFD7DB",
-  black: "#000000"
+  black: "#000000",
 };
+
+export default Colors;

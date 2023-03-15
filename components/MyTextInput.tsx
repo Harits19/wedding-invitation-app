@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { StyleSheet, TextInput, TextInputProps } from "react-native";
-import Colors from "../constants/MyColors";
+import { Colors } from "../constants/Colors";
 import Sizes from "../constants/Sizes";
-import { FontRes } from "../hooks/useCachedResources";
+import { FontResV3 } from "../hooks/useCachedResources";
 import { withOpacity } from "../utils/ColorsUtil";
 
 export type MyTextInputProps = TextInputProps;
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     padding: Sizes.s12,
     fontSize: Sizes.s16,
     color: Colors.white,
-    fontFamily: Object.keys(FontRes)[2],
+    fontFamily: FontResV3.mate.name,
     borderRadius: Sizes.s4,
     outlineStyle: "none",
   },

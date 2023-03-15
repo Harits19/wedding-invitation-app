@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { View, FlatList, useWindowDimensions, Text } from "react-native";
 import AudioAssets from "../../assets/audio/AudioAssets";
 import SideBarView from "./components/SideBarView";
-import Colors from "../../constants/MyColors";
+import { Colors } from "../../constants/Colors";
 import BrideView from "./components/BrideView";
 import Sizes from "../../constants/Sizes";
 import ScaffoldView from "../../components/ScaffoldView";
@@ -14,9 +14,10 @@ import CountingDayView from "./components/CountingDayView";
 import WeddingGiftsView from "./components/WeddingGiftsView";
 import AttendanceConfirmationView from "./components/AttendanceConfirmationView";
 import PrayerGreetingView from "./components/PrayerGreetingView";
+import { MenuModel } from "../../models/MenuModel";
 
 export default function MainScreen() {
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const [audio] = useState(new Audio(AudioAssets.backgroundAudio));
   const [isPlaying, setIsPlaying] = useState(true);
   const [sideBarVisible, setSideBarVisible] = useState(false);
@@ -30,7 +31,29 @@ export default function MainScreen() {
     audio.paused ? audio.play() : audio.pause();
     setIsPlaying(!isPlaying);
   };
-  const menus = [
+
+  const FloatingIcon = (props: {
+    name: MaterialIconsCommunityNameModel;
+    onPress: () => void;
+  }) => {
+    const size = Sizes.s40;
+    return (
+      <MaterialCommunityIcons
+        name={props.name}
+        onPress={props.onPress}
+        style={{
+          backgroundColor: Colors.biscay,
+          borderRadius: size / 2,
+          borderWidth: 1,
+          borderColor: Colors.white,
+        }}
+        size={size}
+        color={Colors.white}
+      />
+    );
+  };
+
+  const menus: MenuModel[] = [
     {
       view: <BrideView />,
       name: "Kedua Mempelai",
@@ -68,8 +91,9 @@ export default function MainScreen() {
       <FlatList
         ref={menusRef}
         showsVerticalScrollIndicator={false}
-        data={menus.map((e) => e.view)}
-        renderItem={({ item }) => <ScaffoldView>{item}</ScaffoldView>}
+        data={menus}
+        renderItem={({ item }) => <ScaffoldView>{item.view}</ScaffoldView>}
+        keyExtractor={(item: MenuModel) => item.name}
       />
       <View
         style={{
@@ -100,24 +124,3 @@ export default function MainScreen() {
     </ScaffoldWindowView>
   );
 }
-
-const FloatingIcon = (props: {
-  name: MaterialIconsCommunityNameModel;
-  onPress: () => void;
-}) => {
-  const size = Sizes.s40;
-  return (
-    <MaterialCommunityIcons
-      name={props.name}
-      onPress={props.onPress}
-      style={{
-        backgroundColor: Colors.biscay,
-        borderRadius: size / 2,
-        borderWidth: 1,
-        borderColor: Colors.white,
-      }}
-      size={size}
-      color={Colors.white}
-    />
-  );
-};

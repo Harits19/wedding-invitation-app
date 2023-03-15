@@ -1,7 +1,7 @@
 import React from "react";
-import { FontRes } from "../hooks/useCachedResources";
 import { TextProps, Text } from "react-native";
-import Colors from "../constants/MyColors";
+import { Colors } from "../constants/Colors";
+import { FontResV3 } from "../hooks/useCachedResources";
 
 export function ParisText(
   props: TextProps & {
@@ -13,7 +13,7 @@ export function ParisText(
       {...props}
       style={[
         {
-          fontFamily: Object.keys(FontRes)[1],
+          fontFamily: FontResV3.parisienne.name,
           color: props.type === "dark" ? "white" : Colors.biscay,
         },
         props.style,
@@ -32,7 +32,7 @@ export function MateText(
       {...props}
       style={[
         {
-          fontFamily: Object.keys(FontRes)[2],
+          fontFamily: FontResV3.mate.name,
           color: props.type === "light" ? Colors.biscay : "white",
         },
         props.style,

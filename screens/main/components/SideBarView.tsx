@@ -12,7 +12,7 @@ import {
 import CopyRightView from "../../../components/CopyrightView";
 import IconView from "../../../components/IconView";
 import { MateText } from "../../../components/StyledText";
-import Colors from "../../../constants/MyColors";
+import { Colors } from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
 
 export default function SideBarView({

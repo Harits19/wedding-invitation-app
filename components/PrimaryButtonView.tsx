@@ -2,11 +2,10 @@ import React from "react";
 import {
   TouchableOpacity,
   TouchableOpacityProps,
-  View,
   ViewProps,
 } from "react-native";
-import Colors from "../../../constants/MyColors";
-import Sizes from "../../../constants/Sizes";
+import { Colors } from "../constants/Colors";
+import Sizes from "../constants/Sizes";
 
 export type PrimaryButtonViewProps = ViewProps &
   TouchableOpacityProps & {

@@ -5,9 +5,10 @@ import { ImageAssets } from "../../../assets/images/ImageAssets";
 import Carousel from "../../../components/Carousel";
 import { MateText, ParisText } from "../../../components/StyledText";
 import TopCircleView from "../../../components/TopCircleView";
-import Colors from "../../../constants/MyColors";
+import { Colors } from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
 import { openNewTab } from "../../../utils/UrlUtil";
+import BrideSectionView from "./BrideSectionView";
 
 export default function BrideView() {
   return (
@@ -60,7 +61,7 @@ export default function BrideView() {
           memohon kehadiran Bapak/Ibu/Saudara/i pada acara pernikahan kami:
         </MateText>
         <View style={{ height: Sizes.s24 }} />
-        <BrideSection
+        <BrideSectionView
           nickName="Fulan"
           fullName="Fulan S.Kom"
           fatherName="H. Father"
@@ -68,7 +69,7 @@ export default function BrideView() {
           instagramAccount="abd.harits19"
         />
         <View style={{ height: Sizes.s56 }} />
-        <BrideSection
+        <BrideSectionView
           nickName="Fulanah"
           fullName="Fulanah S.Kom"
           fatherName="H. Father"
@@ -80,47 +81,3 @@ export default function BrideView() {
     </View>
   );
 }
-
-const BrideSection = (props: {
-  nickName: string;
-  fullName: string;
-  motherName: string;
-  fatherName: string;
-  instagramAccount: string;
-}) => {
-  const imageSize = 240;
-  return (
-    <>
-      <View style={{ height: Sizes.s16 }} />
-      <ParisText style={{ fontSize: Sizes.s48 }}>{props.nickName}</ParisText>
-      <MateText type="light" style={{ fontSize: Sizes.s24 }}>
-        {props.fullName}
-      </MateText>
-      <View style={{ height: Sizes.s8 }} />
-      <MateText
-        type="light"
-        style={{ fontSize: Sizes.s16, textAlign: "center" }}
-      >
-        Putra dari Bapak {props.fatherName} , Dan Ibu {props.motherName}
-      </MateText>
-      <View style={{ height: Sizes.s8 }} />
-      <Entypo
-        name="instagram-with-circle"
-        size={Sizes.s32}
-        onPress={() => {
-          openNewTab(`https://www.instagram.com/${props.instagramAccount}/`);
-        }}
-        color={Colors.biscay}
-      />
-      <View style={{ height: Sizes.s32 }} />
-      <Image
-        style={{
-          width: 160,
-          height: imageSize,
-          borderRadius: imageSize / 3,
-        }}
-        source={ImageAssets.background1}
-      />
-    </>
-  );
-};

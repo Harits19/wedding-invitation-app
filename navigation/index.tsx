@@ -14,7 +14,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
 import { ColorSchemeName, Pressable } from "react-native";
 
-import Colors from "../constants/MyColors";
+import { Colors } from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import MainScreen from "../screens/main/MainScreen";
 import CoverScreen from "../screens/cover/CoverScreen";

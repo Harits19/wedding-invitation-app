@@ -7,8 +7,8 @@ export default function BouncingView({
 }: ViewProps & {
   maxScale?: number;
 }) {
-  const minScale = 1;
-  const scale = new Animated.Value(minScale);
+  const MIN_SCALE = 1;
+  const scale = new Animated.Value(MIN_SCALE);
 
   function animate() {
     Animated.sequence([
@@ -21,7 +21,7 @@ export default function BouncingView({
       }),
       Animated.timing(scale, {
         delay: 150,
-        toValue: minScale,
+        toValue: MIN_SCALE,
         duration: 300,
         easing: Easing.linear,
         useNativeDriver: false,

@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
-import Colors from "../constants/MyColors";
+import { Colors } from "../constants/Colors";
 import Sizes from "../constants/Sizes";
 
 const CHECK_BOX_SIZE = Sizes.s16;

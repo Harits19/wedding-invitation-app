@@ -1,6 +1,6 @@
 import React from "react";
 import { View, useWindowDimensions, ViewProps } from "react-native";
-import Colors from "../constants/MyColors";
+import { Colors } from "../constants/Colors";
 
 export default function ScaffoldWindowView(props: ViewProps) {
   const { width, height } = useWindowDimensions();

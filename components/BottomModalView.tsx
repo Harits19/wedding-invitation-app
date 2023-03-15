@@ -3,17 +3,12 @@ import {
   Modal,
   ModalProps,
   Pressable,
-  StyleSheet,
-  TouchableHighlight,
   TouchableOpacity,
   useWindowDimensions,
   View,
 } from "react-native";
-import Colors from "../constants/MyColors";
 import Sizes from "../constants/Sizes";
 import { MyViewProps } from "../models/MyViewProps";
-import showLog from "../ShowLog";
-import { MateText } from "./StyledText";
 
 export interface BottomModalViewProps extends ModalProps {
   onPressBackdrop?: () => void;

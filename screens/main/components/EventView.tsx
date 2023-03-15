@@ -5,7 +5,7 @@ import BouncingView from "../../../components/BouncingView";
 import IconView from "../../../components/IconView";
 import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText, ParisText } from "../../../components/StyledText";
-import Colors from "../../../constants/MyColors";
+import { Colors } from "../../../constants/Colors";
 import Sizes from "../../../constants/Sizes";
 
 export default function EventView() {
