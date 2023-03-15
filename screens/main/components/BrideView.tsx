@@ -7,7 +7,7 @@ import { MateText, ParisText } from "../../../components/StyledText";
 import TopCircleView from "../../../components/TopCircleView";
 import Colors from "../../../constants/MyColors";
 import Sizes from "../../../constants/Sizes";
-import UrlUtil from "../../../utils/UrlUtil";
+import { openNewTab } from "../../../utils/UrlUtil";
 
 export default function BrideView() {
   return (
@@ -108,9 +108,7 @@ const BrideSection = (props: {
         name="instagram-with-circle"
         size={Sizes.s32}
         onPress={() => {
-          UrlUtil.openNewTab(
-            `https://www.instagram.com/${props.instagramAccount}/`
-          );
+          openNewTab(`https://www.instagram.com/${props.instagramAccount}/`);
         }}
         color={Colors.biscay}
       />

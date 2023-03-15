@@ -9,7 +9,7 @@ export const FontRes = {
   'mate': require('../assets/fonts/MateSC-Regular.ttf')
 }
 
-export default function useCachedResources() {
+export default function  useCachedResources() {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
   // Load any resources or data that we need prior to rendering the app

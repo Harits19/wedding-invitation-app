@@ -4,12 +4,12 @@ import { ImageAssets } from "../../../assets/images/ImageAssets";
 import ScaffoldView from "../../../components/ScaffoldView";
 import { MateText, ParisText } from "../../../components/StyledText";
 import Colors from "../../../constants/MyColors";
-import DayUtil from "../../../utils/DayUtil";
+import { countDifferent } from "../../../utils/DayUtil";
 
 export default function CountingDayView() {
   const marriedDate = new Date(2024, 1, 25, 10, 30, 0);
   const [today, setToday] = useState(new Date());
-  const { day, hour, minute, second } = DayUtil.count(today, marriedDate);
+  const { day, hour, minute, second } = countDifferent(today, marriedDate);
 
   useEffect(() => {
     setInterval(() => {
