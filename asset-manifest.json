@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/wedding-invitation-app/static/js/app.b31b9524.chunk.js",
-    "app.js.map": "/wedding-invitation-app/static/js/app.b31b9524.chunk.js.map",
+    "app.js": "/wedding-invitation-app/static/js/app.fd88ec04.chunk.js",
+    "app.js.map": "/wedding-invitation-app/static/js/app.fd88ec04.chunk.js.map",
     "runtime~app.js": "/wedding-invitation-app/static/js/runtime~app.bbdef20a.js",
     "runtime~app.js.map": "/wedding-invitation-app/static/js/runtime~app.bbdef20a.js.map",
     "static/js/2.2c743eec.chunk.js": "/wedding-invitation-app/static/js/2.2c743eec.chunk.js",
@@ -36,6 +36,6 @@
   "entrypoints": [
     "static/js/runtime~app.bbdef20a.js",
     "static/js/2.2c743eec.chunk.js",
-    "static/js/app.b31b9524.chunk.js"
+    "static/js/app.fd88ec04.chunk.js"
   ]
 }
