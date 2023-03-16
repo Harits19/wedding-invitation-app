@@ -12,7 +12,7 @@ import { RootStackParamList } from "../types";
 const linking: LinkingOptions<RootStackParamList> = {
   prefixes: [
     "http://localhost*",
-    "https://harits19.github.io/wedding-invitation-app/",
+    "https://harits19.github.io/wedding-invitation-app",
   ],
   config: {
     screens: {
