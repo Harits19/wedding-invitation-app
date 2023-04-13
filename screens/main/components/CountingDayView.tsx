@@ -20,7 +20,7 @@ export default function CountingDayView() {
   return (
     <ScaffoldView
       style={{
-        backgroundColor: Colors.geyser,
+        backgroundColor: Colors.anzac,
         alignItems: "center",
         padding: 32,
         justifyContent: "center",

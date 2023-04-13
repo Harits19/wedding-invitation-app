@@ -10,6 +10,7 @@ export default function ScaffoldView({ style, ...props }: ViewProps) {
       style={[
         {
           maxWidth: Sizes.maxWidth,
+          width: width,
           alignSelf: "center",
           overflow: "hidden",
           backgroundColor: "white",

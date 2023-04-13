@@ -82,7 +82,7 @@ export default function MainScreen() {
 
   useEffect(() => {
     console.log("play audio");
-    // audio.play();
+    audio.play();
     audio.loop = true;
   }, []);
 

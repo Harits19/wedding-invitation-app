@@ -5,6 +5,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import useCachedResources from "./hooks/useCachedResources";
 import useColorScheme from "./hooks/useColorScheme";
 import Navigation from "./navigation";
+import CountingDayView from "./screens/main/components/CountingDayView";
 // TODO fix issue root url
 // TODO Tidying up code
 
@@ -15,7 +16,7 @@ export default function App() {
   if (!isLoadingComplete) {
     return null;
   } else {
-    // return <PrayerGreetingView />;
+    // return <CountingDayView />;
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
